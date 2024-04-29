@@ -12,6 +12,10 @@
 
 }
 
+#avatar{
+    display: none;
+}
+
 html{
     font-size: 16px;
 }
