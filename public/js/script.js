@@ -1,12 +1,18 @@
+var logBtn = document.getElementById("btnLogin");
+var avatar = document.getElementById("avatar");
 
-var logBtn = document.getElementById('btnLogin')
-var avatar = document.getElementById('avatar')
-console.log(logBtn)
+function pegaTags() {
 
-
-if(sessionStorage.EMAIL_USUARIO ) { 
-    logBtn.style.display = 'none'
-    avatar.style.display = 'block'
-} else {
-    console.log('nao tem usuario')
+    if (sessionStorage.EMAIL_USUARIO) {
+    logBtn.style.display = "none";
+    avatar.style.display = "block";
+    avatar.style.backgroundColor = "green";
+    avatar.innerHTML = sessionStorage.NOME_USUARIO;
+    console.log("usuario existe");
+    } else {
+    console.log("nao tem usuario");
+    }
 }
+
+
+pegaTags();

@@ -9,77 +9,113 @@
     <title>AquaTech | Login</title>
 
     <script src="./js/sessao.js"></script>
-
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/estilo.css">
     <link rel="icon" href="./assets/icon/favicon2.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 
 <body>
+    <main>
+        <header>
+            <a href="">
+                <img id="logo" src="img/logo completo - Copia.png" alt="">
+            </a>
 
-    <!--Header-->
+            <div class="redes">
+                <div class="login-button logo" id="logo">
+                    <a href="cadastro.html">
+                        <button id="btnLogin" >cadastrar</button>
+                    </a>
+                </div>
+            </div>
+        </header>
 
-    <div class="header">
-        <div class="container">
-            <h1 class="titulo">AquaTech</h1>
-            <ul class="navbar">
-                <li>
-                    <a href="index.html">Inicial</a>
-                </li>
-                <li>
-                    <a href="simulador.html">Simulador</a>
-                </li>
-                <li>|</li>
-                <li class="agora">
-                    <a href="#">Login</a>
-                </li>
-                <li>
-                    <a href="cadastro.html">Cadastro</a>
-                </li>
+
+        <nav class="nav-bar">
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()">&#9776;</button>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="index.html" class="nav-link" id="Inicio">Início</a></li>
+                    <li class="nav-item"><a href="pag_galaxia.html" class="nav-link">Galáxia</a></li>
+                    <li class="nav-item"><a href="pag_buraconegro.html" class="nav-link">Buraco Negro</a></li>
+                    <li class="nav-item"><a href="Pag_planetas.html" class="nav-link">Planetas</a></li>
+                    <li class="nav-item"><a href="pag_telescopio.html" class="nav-link">Telescópios espaciais</a></li>
+                    <li class="nav-item"><a href="pag_nebulosas.html" class="nav-link">Nebulosas</a></li>
+                </ul>
+        </nav>
+
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="index.html" class="nav-link" id="Inicio">Início</a></li>
+                <li class="nav-item"><a href="pag_galaxia.html" class="nav-link">Galáxia</a></li>
+                <li class="nav-item"><a href="pag_buraconegro.html" class="nav-link">Buraco Negro</a></li>
+                <li class="nav-item"><a href="Pag_planetas.html" class="nav-link">Planetas</a></li>
+                <li class="nav-item"><a href="pag_telescopio.html" class="nav-link">Telescópios espaciais</a></li>
+                <li class="nav-item"><a href="pag_nebulosas.html" class="nav-link">Nebulosas</a></li>
             </ul>
         </div>
-    </div>
 
+        <div class="login">
+            <div class="alerta_erro">
+                <div class="card_erro" id="cardErro">
+                    <span id="mensagem_erro"></span>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card card-login">
+                    <h2>O universo te espera!</h2>
+                    <div class="formulario">
+                        <div class="campo">
+                            <span>E-mail:</span>
+                            <input id="email_input" type="text" placeholder="Login">
+                        </div>
+                        <div class="campo">
+                            <span>Senha:</span>
+                            <input id="senha_input" type="password" placeholder="******">
+                        </div>
+                        <button class="botao" onclick="entrar()">Entrar</button>
+                    </div>
 
-    <div class="login">
-        <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <span id="mensagem_erro"></span>
+                    <div id="div_aguardar" class="loading-div">
+                        <img src="./assets/circle-loading.gif" id="loading-gif">
+                    </div>
+
+                    <div id="div_erros_login"></div>
+                </div>
             </div>
         </div>
-        <div class="container">
-            <div class="card card-login">
-                <h2>Olá de volta!</h2>
-                <div class="formulario">
-                    <div class="campo">
-                        <span>E-mail:</span>
-                        <input id="email_input" type="text" placeholder="Login">
-                    </div>
-                    <div class="campo">
-                        <span>Senha:</span>
-                        <input id="senha_input" type="password" placeholder="******">
-                    </div>
-                    <button class="botao" onclick="entrar()">Entrar</button>
+
+        <!--footer inicio-->
+        <footer>
+            <div class="body_footer">
+                <div class="texto-footer">
+                    <h2>Nada me assusta e me fascina mais do que o universo: a incerteza mais bela na qual estamos
+                        inseridos. <cite>Albert Einstein</cite></h2>
+                </div>
+                <div class="desenvolvdo">
+                    <a href="https://github.com/AlejandroFadim" target="_blank">
+                        <h2> Desenvolvdo por AlejandroFadim <i class="fa-brands fa-github"></i></h2>
+                    </a>
+
                 </div>
 
-                <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
-                </div>
-
-                <div id="div_erros_login"></div>
             </div>
-        </div>
-    </div>
+            <div class="footer_redes">
+                <div class="redes_filho">
+                    <a href="https://instagram.com/universoafins?igshid=MzRlODBiNWFlZA==" id="insta"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UCuz9FePPtCziiGhhlJ6OMtw" id="youtube_footer"><i
+                            class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.tiktok.com/@universoafins?_t=8e6DfzFbV6k&_r=1" id="tiktok"><i
+                            class="fa-brands fa-tiktok"></i></a>
+                </div>
 
-    <!--footer inicio-->
-    <div class="footer">
-        <div class="container">
-            <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-            <span class="version">v1.0.0</span>
-        </div>
-    </div>
-    <!--footer fim-->
-
+            </div>
+        </footer>
+    </main>
 </body>
 
 </html>
@@ -94,13 +130,13 @@
         var senhaVar = senha_input.value;
 
         if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
+            cardErro.style.display = "block";
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
             finalizarAguardar();
             return false;
         }
         else {
-            setInterval(sumirMensagem, 5000)
+            setInterval(sumirMensagem, 5000);
         }
 
         console.log("FORM LOGIN: ", emailVar);
@@ -116,7 +152,7 @@
                 senhaServer: senhaVar
             })
         }).then(function (resposta) {
-            console.log("ESTOU NO THEN DO entrar()!")
+            console.log("ESTOU NO THEN DO entrar()!");
 
             if (resposta.ok) {
                 console.log(resposta);
@@ -134,7 +170,7 @@
                     }, 1000); // apenas para exibir o loading
 
                 });
-        
+
 
             } else {
 
@@ -148,11 +184,11 @@
 
         }).catch(function (erro) {
             console.log(erro);
-        })
+        });
     }
 
     function sumirMensagem() {
-        cardErro.style.display = "none"
+        cardErro.style.display = "none";
     }
 
 </script>
