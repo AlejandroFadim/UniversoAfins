@@ -1,252 +1,324 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon-16x16.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/paginas.css">
     <script src="js/script.js" defer></script>
     <title>Imagens reais de saturno</title>
 </head>
+
 <body>
-    
-        <header>
-            <a href="#">
-                <img id="logo" src="img/logo completo - Copia.png" alt="">
-            </a>
 
+    <header>
+        <a href="#">
+            <img id="logo" src="img/logo completo - Copia.png" alt="">
+        </a>
+
+        <div class="redes">
             <div class="redes">
-                <div class="redes">
-                    <div class="login-button logo" id="logo">
-                        <a href="login.html">
-                            <button id="btnLogin" >login</button>
-                        </a>
-                        <a href="avatar">
-                            <button id="avatar" >avatar</button>
-                        </a>
-                    </div>
+                <div class="login-button logo" id="logo">
+                    <a href="login.html">
+                        <button id="btnLogin">login</button>
+                    </a>
+                    <a href="avatar">
+                        <button id="avatar">avatar</button>
+                    </a>
                 </div>
             </div>
-        </header>
-            <nav class="nav-bar">
-                <div class="mobile-menu-icon">
-                    <button onclick="menuShow()">&#9776;</button>
-                </div>
-                <div class="nav-list">
-                    <ul>
-                        <li class="nav-item"><a href="index.html" class="nav-link" id="Inicio">Início</a></li>
-                        <li class="nav-item"><a href="pag_galaxia.html" class="nav-link">Galáxia</a></li>
-                        <li class="nav-item"><a href="pag_buraconegro.html" class="nav-link">Buraco Negro</a></li>
-                        <li class="nav-item"><a href="Pag_planetas.html" class="nav-link">Planetas</a></li>
-                        <li class="nav-item"><a href="pag_telescopio.html" class="nav-link">Telescopios espaciais</a></li>
-                        <li class="nav-item"><a href="pag_nebulosas.html" class="nav-link">Nebulosas</a></li>
-                    </ul>
-            </nav>
-            <div class="mobile-menu">
-                <ul>
-                    <li class="nav-item"><a href="index.html" class="nav-link" id="Inicio">Início</a></li>
-                    <li class="nav-item"><a href="pag_galaxia.html" class="nav-link">Galáxia</a></li>
-                    <li class="nav-item"><a href="pag_buraconegro.html" class="nav-link">Buraco Negro</a></li>
-                    <li class="nav-item"><a href="Pag_planetas.html" class="nav-link">Planetas</a></li>
-                    <li class="nav-item"><a href="pag_telescopio.html" class="nav-link">Telescopios espaciais</a></li>
-                    <li class="nav-item"><a href="pag_nebulosas.html" class="nav-link">Nebulosas</a></li>
-                </ul>
-            </div>
+        </div>
+    </header>
+    <nav class="nav-bar">
+        <div class="mobile-menu-icon">
+            <button onclick="menuShow()">&#9776;</button>
+        </div>
+        <div class="nav-list">
+            <ul>
+                <li class="nav-item"><a href="index.html" class="nav-link" id="Inicio">Início</a></li>
+                <li class="nav-item"><a href="pag_galaxia.html" class="nav-link">Galáxia</a></li>
+                <li class="nav-item"><a href="pag_buraconegro.html" class="nav-link">Buraco Negro</a></li>
+                <li class="nav-item"><a href="Pag_planetas.html" class="nav-link">Planetas</a></li>
+                <li class="nav-item"><a href="pag_telescopio.html" class="nav-link">Telescopios espaciais</a></li>
+                <li class="nav-item"><a href="pag_nebulosas.html" class="nav-link">Nebulosas</a></li>
+            </ul>
+    </nav>
+    <div class="mobile-menu">
+        <ul>
+            <li class="nav-item"><a href="index.html" class="nav-link" id="Inicio">Início</a></li>
+            <li class="nav-item"><a href="pag_galaxia.html" class="nav-link">Galáxia</a></li>
+            <li class="nav-item"><a href="pag_buraconegro.html" class="nav-link">Buraco Negro</a></li>
+            <li class="nav-item"><a href="Pag_planetas.html" class="nav-link">Planetas</a></li>
+            <li class="nav-item"><a href="pag_telescopio.html" class="nav-link">Telescopios espaciais</a></li>
+            <li class="nav-item"><a href="pag_nebulosas.html" class="nav-link">Nebulosas</a></li>
+        </ul>
+    </div>
 
-            <div class="tag">
-                <i class="fa-solid fa-rocket" class="foguete"></i>
-            </div>
+    <div class="tag">
+        <i class="fa-solid fa-rocket" class="foguete"></i>
+    </div>
     <main>
-            <article>
-                
-                <section>
-                    <h2 style="margin: auto; padding-top: 15px;">
+        <article>
+
+            <section>
+                <h2 style="margin: auto; padding-top: 15px;">
                     Imagens Reais de Saturno
-                    </h2>
-                    <img src="img/saturno_blog.jpg" alt="">
-                </section>
+                </h2>
+                <img src="img/saturno_blog.jpg" alt="">
+            </section>
 
-                <section>
-                    
-                    <p>
-                        Imagen real de saturno a imagem foi tirada com a câmera grande angular da sonda Cassini em 23 de janeiro de 2005... <br> <p>A missão responsavel por essa majestosa imagem é a A missão Cassini-Huygens é um projeto cooperativo da NASA, da Agência Espacial Europeia e da Agência Espacial Italiana
-                    </p>
-                </section>
-                
-                <section>
-                    
-                    <img src="img/saturno2.jpg" alt="">
-                    <p>
-                        A Cassini da NASA olha através dos anéis gelados de Saturno em direção à lua gelada Tétis, cujo lado noturno é iluminado por Saturno, ou luz solar refletida pelo planeta.
+            <section>
 
-Tétis estava do outro lado de Saturno em relação a Cassini aqui; um observador olhando para cima da superfície da lua em direção a Cassini veria o disco iluminado de Saturno enchendo o céu.
+                <p>
+                    Imagen real de saturno a imagem foi tirada com a câmera grande angular da sonda Cassini em 23 de
+                    janeiro de 2005... <br>
+                <p>A missão responsavel por essa majestosa imagem é a A missão Cassini-Huygens é um projeto cooperativo
+                    da NASA, da Agência Espacial Europeia e da Agência Espacial Italiana
+                </p>
+            </section>
 
-Tétis foi iluminado por um fator de dois nesta imagem para aumentar sua visibilidade. Uma lasca do hemisfério norte iluminado pelo sol da Lua é vista no topo. Uma cunha brilhante do lado iluminado pelo sol de Saturno é vista no canto inferior esquerdo.
+            <section>
 
-Esta vista olha para o lado iluminado pelo sol dos anéis a cerca de 10 graus acima do plano do anel. A imagem foi tirada em luz visível com a câmera grande angular da sonda Cassini em 13 de maio de 2017.
-                    </p>
-                </section>
-                
-                <section>
-                    <img src="img/saturno3.jpg" alt="">
-                    <p>
-                        Visto pela sonda Cassini da NASA dentro da vasta extensão de anéis de Saturno, Prometheus aparece como pouco mais do que um ponto. Mas essa pequena lua ainda consegue moldar o anel F, confinando-o ao seu estreito domínio.
+                <img src="img/saturno2.jpg" alt="">
+                <p>
+                    A Cassini da NASA olha através dos anéis gelados de Saturno em direção à lua gelada Tétis, cujo lado
+                    noturno é iluminado por Saturno, ou luz solar refletida pelo planeta.
 
-Prometheus (53 milhas, ou 86 quilômetros de diâmetro) e sua companheira lua Pandora (50 milhas, ou 81 quilômetros de diâmetro) orbitam ao lado do anel F e impedem que o anel se espalhe para fora através de um processo apelidado de "pastoreio".
+                    Tétis estava do outro lado de Saturno em relação a Cassini aqui; um observador olhando para cima da
+                    superfície da lua em direção a Cassini veria o disco iluminado de Saturno enchendo o céu.
 
-Esta visão olha para o lado não iluminado dos anéis a partir de cerca de 45 graus abaixo do plano do anel. A imagem foi tirada em luz verde com a câmera grande angular da sonda Cassini em 8 de março de 2014.
+                    Tétis foi iluminado por um fator de dois nesta imagem para aumentar sua visibilidade. Uma lasca do
+                    hemisfério norte iluminado pelo sol da Lua é vista no topo. Uma cunha brilhante do lado iluminado
+                    pelo sol de Saturno é vista no canto inferior esquerdo.
 
-A visão foi obtida a uma distância de aproximadamente 533.000 milhas (858.000 quilômetros) de Prometheus e em um ângulo de fase de 90 graus. A escala da imagem é de 32 milhas (51 quilômetros) por pixel.
-                    </p>
-                </section>
-                
-                <section>
-                    <img src="img/saturno4.jpg" alt="">
+                    Esta vista olha para o lado iluminado pelo sol dos anéis a cerca de 10 graus acima do plano do anel.
+                    A imagem foi tirada em luz visível com a câmera grande angular da sonda Cassini em 13 de maio de
+                    2017.
+                </p>
+            </section>
 
-                    <p>
-                        Saturno aparece para as câmeras Cassini da NASA como um crescente fino e iluminado pelo sol nesta visão sobrenatural. Os cidadãos da Terra, estando muito mais perto do Sol do que Saturno, nunca conseguem desfrutar de uma visão de Saturno como esta sem a ajuda de nossos enviados robôs.
+            <section>
+                <img src="img/saturno3.jpg" alt="">
+                <p>
+                    Visto pela sonda Cassini da NASA dentro da vasta extensão de anéis de Saturno, Prometheus aparece
+                    como pouco mais do que um ponto. Mas essa pequena lua ainda consegue moldar o anel F, confinando-o
+                    ao seu estreito domínio.
 
-Partes do lado noturno de Saturno mostram iluminação fraca devido à luz refletida dos anéis de volta para o planeta, um efeito apelidado de "ringshine". Esta visão olha para o lado não iluminado dos anéis a partir de cerca de 43 graus abaixo do plano do anel. A imagem foi tirada em luz verde com a câmera grande angular da sonda Cassini em 4 de agosto de 2013.
+                    Prometheus (53 milhas, ou 86 quilômetros de diâmetro) e sua companheira lua Pandora (50 milhas, ou
+                    81 quilômetros de diâmetro) orbitam ao lado do anel F e impedem que o anel se espalhe para fora
+                    através de um processo apelidado de "pastoreio".
 
-A visão foi obtida a uma distância de aproximadamente 1,2 milhão de milhas (2 milhões de quilômetros) de Saturno. A escala da imagem é de 75 milhas (120 quilômetros) por pixel.
-                    </p>
-                </section>
-                
-                <section>
-                    
-                    <img src="img/saturno5.jpg" alt="">  
-                    <p>
-                        A sonda Cassini da NASA capturou esta imagem de Saturno enquanto vê o planeta e seus anéis expansivos de todos os tipos de ângulos. Aqui, um Saturno semi-iluminado fica torto enquanto a pequena Dione olha do canto inferior esquerdo.
-                    </p>
-                </section>
-                
-                <section>
+                    Esta visão olha para o lado não iluminado dos anéis a partir de cerca de 45 graus abaixo do plano do
+                    anel. A imagem foi tirada em luz verde com a câmera grande angular da sonda Cassini em 8 de março de
+                    2014.
 
-                    <h2>A despedida</h2>
-                    <img src="img/cassini.jpg" alt="">
-                    <p>
-                        Por mais de uma década, a sonda Cassini da NASA compartilhou as maravilhas de Saturno e sua família de luas geladas – levando-nos a mundos surpreendentes onde rios de metano correm para um mar de metano e onde jatos de gelo e gás estão lançando material para o espaço a partir de um oceano de água líquida que pode abrigar os ingredientes para a vida.
-                    </p>
+                    A visão foi obtida a uma distância de aproximadamente 533.000 milhas (858.000 quilômetros) de
+                    Prometheus e em um ângulo de fase de 90 graus. A escala da imagem é de 32 milhas (51 quilômetros)
+                    por pixel.
+                </p>
+            </section>
 
-                    <p>
-                        Cassini revelou em grande detalhe as verdadeiras maravilhas de Saturno, um mundo gigante governado por tempestades furiosas e delicadas harmonias de gravidade.
-                    </p>
+            <section>
+                <img src="img/saturno4.jpg" alt="">
 
+                <p>
+                    Saturno aparece para as câmeras Cassini da NASA como um crescente fino e iluminado pelo sol nesta
+                    visão sobrenatural. Os cidadãos da Terra, estando muito mais perto do Sol do que Saturno, nunca
+                    conseguem desfrutar de uma visão de Saturno como esta sem a ajuda de nossos enviados robôs.
 
-                    <p>
-                        A Cassini transportou um passageiro para o sistema de Saturno, a sonda europeia Huygens – o primeiro objeto feito pelo homem a pousar em um mundo no distante sistema solar externo.
+                    Partes do lado noturno de Saturno mostram iluminação fraca devido à luz refletida dos anéis de volta
+                    para o planeta, um efeito apelidado de "ringshine". Esta visão olha para o lado não iluminado dos
+                    anéis a partir de cerca de 43 graus abaixo do plano do anel. A imagem foi tirada em luz verde com a
+                    câmera grande angular da sonda Cassini em 4 de agosto de 2013.
 
-Depois de 20 anos no espaço – 13 desses anos explorando Saturno – a Cassini esgotou seu suprimento de combustível. E assim, para proteger luas de Saturno que poderiam ter condições adequadas para a vida, a Cassini foi enviada em uma ousada missão final que selaria seu destino. Depois de uma série de quase duas dúzias de mergulhos roendo as unhas entre o planeta e seus anéis gelados, a Cassini mergulhou na atmosfera de Saturno em 15 de setembro de 2017, devolvendo dados científicos até o fim.
-                    </p>
-                    <h2>
-                        Alguns números-chave da missão Cassini-Huygens a Saturno.
-                    </h2>
-                    <p>
-                        2,5 milhões de comandos executados. <br>
+                    A visão foi obtida a uma distância de aproximadamente 1,2 milhão de milhas (2 milhões de
+                    quilômetros) de Saturno. A escala da imagem é de 75 milhas (120 quilômetros) por pixel.
+                </p>
+            </section>
 
-4,9 bilhões de milhas percorridas desde o lançamento (7,9 bilhões de quilômetros)<br>
+            <section>
 
-635 GB de dados científicos coletados<br>
+                <img src="img/saturno5.jpg" alt="">
+                <p>
+                    A sonda Cassini da NASA capturou esta imagem de Saturno enquanto vê o planeta e seus anéis
+                    expansivos de todos os tipos de ângulos. Aqui, um Saturno semi-iluminado fica torto enquanto a
+                    pequena Dione olha do canto inferior esquerdo.
+                </p>
+            </section>
 
-3.948 artigos científicos publicados<br>
+            <section>
 
-6 luas nomeadas descobertas<br>
+                <h2>A despedida</h2>
+                <img src="img/cassini.jpg" alt="">
+                <p>
+                    Por mais de uma década, a sonda Cassini da NASA compartilhou as maravilhas de Saturno e sua família
+                    de luas geladas – levando-nos a mundos surpreendentes onde rios de metano correm para um mar de
+                    metano e onde jatos de gelo e gás estão lançando material para o espaço a partir de um oceano de
+                    água líquida que pode abrigar os ingredientes para a vida.
+                </p>
 
-294 órbitas concluídas<br>
-
-162 sobrevoos direcionados das luas de Saturno<br>
-
-453.048 imagens tiradas<br>
-
-27 nações participantes<br>
-
-Queima do motor 360<br>
-                    </p>
-                </section>
-            </article>
-            
-
-            <aside class="sticky-aside">
-                <img src="img/logo=blog=pag.jpg" alt="">
-                
-                <h2>Vislumbre a grandeza do universo:</h2> <h3> Vídeos incríveis que o deixarão maravilhado todas as semanas no YouTube + notícias astronômicas diárias para alimentar sua curiosidade no instagram e facebook! </h3>
-                <div class="redes-aside">
-
-                    <a href="https://www.youtube.com/channel/UCuz9FePPtCziiGhhlJ6OMtw" target="_blank"><i class="fa-brands fa-youtube" style="color: #000000;"></i></a>
+                <p>
+                    Cassini revelou em grande detalhe as verdadeiras maravilhas de Saturno, um mundo gigante governado
+                    por tempestades furiosas e delicadas harmonias de gravidade.
+                </p>
 
 
-                    
-                    <a href="https://instagram.com/universoafins?igshid=MzRlODBiNWFlZA==" target="_blank"><i class="fa-brands fa-instagram" style="color: #000000;"></i></a>
-                    <a href="#" target="_blank"><i class="fa-brands fa-facebook" style="color: #000000;"></i></a>
-                    
-                </div>
-            </aside>
-            
-        </main>
-    <main class="main_semelhante">    
+                <p>
+                    A Cassini transportou um passageiro para o sistema de Saturno, a sonda europeia Huygens – o primeiro
+                    objeto feito pelo homem a pousar em um mundo no distante sistema solar externo.
+
+                    Depois de 20 anos no espaço – 13 desses anos explorando Saturno – a Cassini esgotou seu suprimento
+                    de combustível. E assim, para proteger luas de Saturno que poderiam ter condições adequadas para a
+                    vida, a Cassini foi enviada em uma ousada missão final que selaria seu destino. Depois de uma série
+                    de quase duas dúzias de mergulhos roendo as unhas entre o planeta e seus anéis gelados, a Cassini
+                    mergulhou na atmosfera de Saturno em 15 de setembro de 2017, devolvendo dados científicos até o fim.
+                </p>
+                <h2>
+                    Alguns números-chave da missão Cassini-Huygens a Saturno.
+                </h2>
+                <p>
+                    2,5 milhões de comandos executados. <br>
+
+                    4,9 bilhões de milhas percorridas desde o lançamento (7,9 bilhões de quilômetros)<br>
+
+                    635 GB de dados científicos coletados<br>
+
+                    3.948 artigos científicos publicados<br>
+
+                    6 luas nomeadas descobertas<br>
+
+                    294 órbitas concluídas<br>
+
+                    162 sobrevoos direcionados das luas de Saturno<br>
+
+                    453.048 imagens tiradas<br>
+
+                    27 nações participantes<br>
+
+                    Queima do motor 360<br>
+                </p>
+            </section>
+        </article>
+
+
+        <aside class="sticky-aside">
+            <img src="img/logo=blog=pag.jpg" alt="">
+
+            <h2>Vislumbre a grandeza do universo:</h2>
+            <h3> Vídeos incríveis que o deixarão maravilhado todas as semanas no YouTube + notícias astronômicas diárias
+                para alimentar sua curiosidade no instagram e facebook! </h3>
+            <div class="redes-aside">
+
+                <a href="https://www.youtube.com/channel/UCuz9FePPtCziiGhhlJ6OMtw" target="_blank"><i
+                        class="fa-brands fa-youtube" style="color: #000000;"></i></a>
+
+
+
+                <a href="https://instagram.com/universoafins?igshid=MzRlODBiNWFlZA==" target="_blank"><i
+                        class="fa-brands fa-instagram" style="color: #000000;"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-facebook" style="color: #000000;"></i></a>
+
+            </div>
+        </aside>
+        
+    </main>
+    <div class="divPai">
+        <section class="comentarioPai">
+            <div class="comentarios">
+                <h2>faça seu comentario:</h2>
+    
+                <textarea name="" id="" cols="100" rows="255" placeholder="comentario..."></textarea>
+                <button onclick="comentar()" class="login-button">publicar comentario</button>
+
+                <span id="spanComentario">É necessario se logar para comentar </span>
+                <a href="login.html" id="LinkComentario">clique aqui e faça login</a>
+    
+            </div>
+        </section>
+    </div>
+    <main class="main_semelhante">
         <div class="titulo_article">
-            <h2>.Titulos semelhantes.</h2>    
+            <h2>.Titulos semelhantes.</h2>
         </div>
         <article class="titulos_semenhantes">
-                <section class="section_semelhante">
-                    <div class="card">
-                        <div class="button_card">
-                            <button><a href="#"> marte </a></button>
+            <section class="section_semelhante">
+                <div class="card">
+                    <div class="button_card">
+                        <button><a href="#"> marte </a></button>
+                    </div>
+                    <div class="header_box">
+                        <div class="imagem">
+                            <img src="img/marte.jpg">
                         </div>
-                        <div class="header_box">
-                            <div class="imagem">
-                                <img src="img/marte.jpg">
-                            </div>
-                            <div class="texto"><a href="pag_marte.html"><h2>Paisagem alienígena</h2><p>NASA explora um país das maravilhas de inverno em Marte</p><br><p>Neve em forma de cubo, paisagens geladas e geada fazem parte da estação mais fria do Planeta Vermelho...</p><i class="fa-solid fa-earth-europe" style="color: #ffffff;"></i></a></div>
-                        </div>
-                        
+                        <div class="texto"><a href="pag_marte.html">
+                                <h2>Paisagem alienígena</h2>
+                                <p>NASA explora um país das maravilhas de inverno em Marte</p><br>
+                                <p>Neve em forma de cubo, paisagens geladas e geada fazem parte da estação mais fria do
+                                    Planeta Vermelho...</p><i class="fa-solid fa-earth-europe"
+                                    style="color: #ffffff;"></i>
+                            </a></div>
                     </div>
 
-                    <div class="card">
-                        <div class="button_card">
-                            <button><a href="#"> Exo planeta </a></button>
-                        </div>
-                        <div class="header_box">    
-                            <div class="imagem">
-                                <img src="img/kepler.jpg"> 
-                            </div>
-                            <div class="texto">
-                                <a href="pag_Kepler.html">
-                                    <h2>Kepler 186f: Planeta Habitável e Semelhante à Terra</h2>
-                                    <p>Kepler 186f é um planeta exoplaneta que foi descoberto usando o satélite Kepler da NASA. Ele é considerado potencialmente habitável porque está localizado na "Zona habitável" da sua estrela... </p><br> <i class="fa-solid fa-earth-europe" style="color: #ffffff;"></i>
-                                </a>
-                            </div>
-                        </div>  
+                </div>
+
+                <div class="card">
+                    <div class="button_card">
+                        <button><a href="#"> Exo planeta </a></button>
                     </div>
+                    <div class="header_box">
+                        <div class="imagem">
+                            <img src="img/kepler.jpg">
+                        </div>
+                        <div class="texto">
+                            <a href="pag_Kepler.html">
+                                <h2>Kepler 186f: Planeta Habitável e Semelhante à Terra</h2>
+                                <p>Kepler 186f é um planeta exoplaneta que foi descoberto usando o satélite Kepler da
+                                    NASA. Ele é considerado potencialmente habitável porque está localizado na "Zona
+                                    habitável" da sua estrela... </p><br> <i class="fa-solid fa-earth-europe"
+                                    style="color: #ffffff;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </section>
         </article>
     </main>
 
 
+
+
     <footer>
         <div class="body_footer">
             <div class="texto">
-            <h2>Nada me assusta e me fascina mais do que o universo: a incerteza mais bela na qual estamos inseridos. <cite>Albert Einstein</cite></h2>
+                <h2>Nada me assusta e me fascina mais do que o universo: a incerteza mais bela na qual estamos
+                    inseridos. <cite>Albert Einstein</cite></h2>
             </div>
             <div class="desenvolvdo">
                 <a href="https://github.com/BoemiaDEV" target="_blank">
                     <h2> Desenvolvdo por BoemiaDEV <i class="fa-brands fa-github"></i></h2>
                 </a>
-            
-            </div>
 
             </div>
-            <div class="footer_redes">
-                <div class="redes_filho">
-                    <a href="https://instagram.com/universoafins?igshid=MzRlODBiNWFlZA==" id="insta"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/channel/UCuz9FePPtCziiGhhlJ6OMtw" id="youtube_footer"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://www.tiktok.com/@universoafins?_t=8e6DfzFbV6k&_r=1" id="tiktok"><i class="fa-brands fa-tiktok"></i></a>
-                </div>
-                
+
+        </div>
+        <div class="footer_redes">
+            <div class="redes_filho">
+                <a href="https://instagram.com/universoafins?igshid=MzRlODBiNWFlZA==" id="insta"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCuz9FePPtCziiGhhlJ6OMtw" id="youtube_footer"><i
+                        class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@universoafins?_t=8e6DfzFbV6k&_r=1" id="tiktok"><i
+                        class="fa-brands fa-tiktok"></i></a>
+            </div>
+
         </div>
     </footer>
 
 </body>
+
 </html>

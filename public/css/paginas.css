@@ -1,23 +1,25 @@
-.tag{
+.tag {
     padding: 1.25rem;
     margin: 1.25rem;
     display: flex;
     justify-content: center;
 }
 
-.tag i{
+.tag i {
     color: #ffffff;
     font-size: 2.1875rem;
 }
-main{
+
+main {
     overflow: visible;
     display: flex;
     justify-content: space-between;
-    max-width: 77.5rem;
+    max-width: 90rem;
     width: 100%;
     height: auto;
 }
-article{
+
+article {
     background-color: #ffffff;
     box-sizing: border-box;
     margin: 1.25rem;
@@ -28,29 +30,33 @@ article{
     flex-direction: column;
     max-width: 50rem;
     width: 100%;
-    height: max-content; 
+    height: max-content;
     padding: 0rem;
 }
-article img{
+
+article img {
     border-radius: 1.5625rem;
     width: 100%;
     height: auto;
     box-sizing: border-box;
     padding: 2.5rem;
 }
-section{
+
+section {
     display: flex;
     justify-content: center;
     flex: wrap;
-    flex-direction: column; 
+    flex-direction: column;
 }
-section h2{
+
+section h2 {
     text-align: justify;
     font-size: 2.125rem;
     padding: 0rem 1.25rem;
     margin: 0;
 }
-section p{
+
+section p {
     text-align: justify;
     color: #333;
     font-weight: lighter;
@@ -58,19 +64,22 @@ section p{
     padding: 0rem 1.25rem;
     margin: 1.25rem 0 1.25rem;
 }
-section img{
+
+section img {
     width: 100%;
     padding: 1.25rem 1.25rem;
 }
-aside img{
+
+aside img {
     border-radius: 100%;
     margin: 1.25rem;
     width: 6.25rem;
     height: auto;
 }
-aside{ 
+
+aside {
     position: sticky;
-    top: 0.9375rem; 
+    top: 0.9375rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,21 +91,23 @@ aside{
     max-height: 45.5rem;
     border-radius: 0.9375rem;
 }
-aside h2{
+
+aside h2 {
     font-size: max(0, 2em, 2.125rem);
     text-align: center;
     margin-bottom: 1.25rem;
     margin-top: 0.625rem;
     padding: 0 1.25rem;
 }
-aside h3{
+
+aside h3 {
     font-size: max(0, 1.5em, 1.8125rem);
     text-align: center;
     margin-bottom: 0.75rem;
     padding: 0 1.25rem;
 }
 
-.main_semelhante{
+.main_semelhante {
     margin: auto;
     overflow: visible;
     display: flex;
@@ -107,7 +118,8 @@ aside h3{
     align-items: center;
     justify-content: center;
 }
-.titulo_article{
+
+.titulo_article {
     border-top: solid 3px;
     border-bottom: solid 3px;
     padding: 1.25rem;
@@ -120,7 +132,8 @@ aside h3{
     color: #ffffff;
     border-radius: 10px;
 }
-.titulos_semenhantes{
+
+.titulos_semenhantes {
     padding: 20px;
     box-sizing: border-box;
     margin: 1.25rem;
@@ -131,16 +144,18 @@ aside h3{
     max-width: max-content;
     text-align: justify;
     width: calc(100vw - 3.125rem);
-    height: max-content; 
-    
+    height: max-content;
+
 }
-.section_semelhante{
+
+.section_semelhante {
     flex-direction: row;
     justify-content: center;
     color: #ffffff;
 
 }
-.card{
+
+.card {
     box-sizing: border-box;
     width: max-content;
     height: max-content;
@@ -148,22 +163,25 @@ aside h3{
 
 }
 
-.texto{
+.texto {
     text-align: center;
     /* color: #ffffff; */
 
 }
-.texto h2{
+
+.texto h2 {
     text-align: center;
     font-size: 24px;
     /* color: #ffffff; */
 
 }
-.card i{
+
+.card i {
     padding: 0.625rem;
     margin: 0;
 }
-.card p{
+
+.card p {
     color: #ffffff;
     margin: 0;
     font-size: 20px;
@@ -171,33 +189,108 @@ aside h3{
 }
 
 
-.header_box{
+.header_box {
     border-radius: 0.9375rem;
     width: calc(100vw - 37.5rem);
     width: 380px;
     min-width: 23.75rem;
 }
 
-.redes-aside{
+.redes-aside {
     font-size: 1.875rem;
 }
-.redes-aside i{
+
+.redes-aside i {
     margin: 0.3125rem;
     padding: 0.625rem 0;
 }
+
 @keyframes girar {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
 }
+
 .redes-aside i:hover {
-    transform: scale(1.2); 
+    transform: scale(1.2);
     transition: 0.3s;
     filter: brightness(150%);
 }
+
 .tag:hover {
     animation: girar 2s linear infinite;
+}
+
+.divPai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comentarioPai {
+    box-sizing: border-box;
+    display: flex;
+    width: 80%;
+    height: fit-content;
+    margin: 100px 10px;
+}
+
+.comentarios {
+    border-radius: 0.9375rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    background-color: #ffffff;
+}
+
+
+.comentarios textarea {
+    box-sizing: border-box;
+    width: 90%;
+    margin: auto;
+    height: 300px;
+    text-decoration: none;
+    background-color: #eeeeee;
+    border: #ffffff;
+    font-size: 38px;
+    border-radius: 10px;
+}
+
+.comentarios button {
+    margin: 20px 50px;
+    border: none;
+    background-color: #c12525;
+    padding: 0.625rem;
+    width: 180px;
+    border-radius: 0.625rem;
+    color: #ffff;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+
+.comentarios h2{
+    margin: 20px 30px;
+}
+
+.comentarios a, span{
+    display: none;
+    margin: auto;
+    padding: 10px;
+    color: #c12525;
+
+}
+
+.comentarios a{
+    text-decoration: underline;
+}
+
+.comentarios a:hover{
+    color: #333;
 }
