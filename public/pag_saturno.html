@@ -14,7 +14,7 @@
     <title>Imagens reais de saturno</title>
 </head>
 
-<body>
+<body onload="atualizarFeed()">
 
     <header>
         <a href="#">
@@ -225,21 +225,35 @@
 
             </div>
         </aside>
-        
+
     </main>
     <div class="divPai">
         <section class="comentarioPai">
             <div class="comentarios">
                 <h2>faça seu comentario:</h2>
-    
-                <textarea name="" id="" cols="100" rows="255" placeholder="comentario..."></textarea>
-                <button onclick="comentar()" class="login-button">publicar comentario</button>
 
-                <span id="spanComentario">É necessario se logar para comentar </span>
-                <a href="login.html" id="LinkComentario">clique aqui e faça login</a>
-    
+                <label>
+                    <input type="text" id="titulo" name="titulo" maxlength="255" placeholder="Titulo" required>
+                </label>
+                <br>
+                <label>
+                    <textarea name="descricao" id="descricao" cols="100" rows="5" placeholder="comentario..."
+                        maxlength="250" required></textarea>
+                </label>
+                <br>
+                <label>
+                    <button onclick="publicar()" class="login-button">publicar comentario</button>
+
+                    <span id="spanComentario"></span>
+                    <a href="login.html" id="LinkComentario">clique aqui e faça login</a>
+                </label>
+                <h2>comentarios</h2>
             </div>
         </section>
+    </div>
+    <div class="div-results">
+        <div id="feed_container" class="feed-container">
+        </div>
     </div>
     <main class="main_semelhante">
         <div class="titulo_article">

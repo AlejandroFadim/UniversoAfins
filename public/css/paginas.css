@@ -240,20 +240,29 @@ aside h3 {
 }
 
 .comentarios {
-    border-radius: 0.9375rem;
+    border-radius: 15px 15px 0 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    /* width: 100%; */
     height: fit-content;
     background-color: #ffffff;
 }
 
+.comentarios input {
+    box-sizing: border-box;
+    width: 50%;
+    margin: 10px 50px;
+    height: 30px;
+    border: #ffffff;
+    background-color: #eeeeee;
+    border-radius: 10px;
+}
 
 .comentarios textarea {
     box-sizing: border-box;
     width: 90%;
-    margin: auto;
+    margin: auto 50px;
     height: 300px;
     text-decoration: none;
     background-color: #eeeeee;
@@ -263,7 +272,7 @@ aside h3 {
 }
 
 .comentarios button {
-    margin: 20px 50px;
+    margin: 20px 50px 45px 50px;
     border: none;
     background-color: #c12525;
     padding: 0.625rem;
@@ -275,22 +284,59 @@ aside h3 {
 }
 
 
-.comentarios h2{
-    margin: 20px 30px;
+.comentarios h2 {
+    margin: 10px 30px;
 }
 
-.comentarios a, span{
+.comentarios #LinkComentario, #spanComentario {
+    text-align: center;
     display: none;
     margin: auto;
     padding: 10px;
     color: #c12525;
-
 }
 
-.comentarios a{
+.comentarios a {
     text-decoration: underline;
 }
 
-.comentarios a:hover{
+.comentarios a:hover {
     color: #333;
+}
+.div-results{
+    margin-top: -110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feed-container {
+
+    box-sizing: border-box;
+    background-color: #ffff;
+    border-radius: 0.9375rem;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: fit-content;
+    background-color: #ffffff;
+    padding: 50px;
+}
+
+.publicacao{
+    border-radius: 0.9375rem;
+    background-color: #d1cfcf;
+    margin: 10px 0;
+}
+.publicacao-nome{
+    font-size: 32px;
+    padding: 20px 0;
+}
+
+.h3Comentario{
+    padding: 0;
+    margin: 10px 0;
+}
+
+.publicacao-descricao{
+    margin: 10px 0;
 }
