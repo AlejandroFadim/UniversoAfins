@@ -70,7 +70,7 @@ function publicar() {
                                 idUsuario +
                                 "!"
                         );
-                        window.location = "#tiulo";
+                        window.location = `./${urlManipulada}`;
                         location.reload();
                         limparFormulario();
                         finalizarAguardar();
@@ -105,7 +105,6 @@ function atualizarFeed() {
                     var feed = document.getElementsByClassName("feed_container");
                     var mensagem = document.createElement("span");
                     mensagem.innerHTML = "Nenhum comentario";
-                    console.log('tem comentariossssss ---------')
                     feed.appendChild(mensagem);
                     throw "Nenhum resultado encontrado!!";
                 }
