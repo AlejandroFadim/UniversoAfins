@@ -6,8 +6,11 @@ var idUsuario = sessionStorage.ID_USUARIO;
 var nomeUsuario = sessionStorage.EMAIL_USUARIO;
 var iptTutlo = document.getElementById("titulo");
 var iptDescricao = document.getElementById("descricao");
-const atualURl = window.location.href;
-console.log(atualURl);
+var atualURl = window.location.href;
+
+var urlArtigo = atualURl.split("/");
+var urlManipulada = urlArtigo[urlArtigo.length - 1]
+console.log(urlManipulada);
 function pegaTags() {
     if (sessionStorage.EMAIL_USUARIO) {
         logBtn.style.display = "none";
@@ -46,6 +49,7 @@ function publicar() {
             iptDescricao.style.border = "none";
             spanComentario.style.display = "none";
             var corpo = {
+                urlPagina: `${urlManipulada}`,
                 titulo: tituloFormComentario,
                 descricao: descricaoFormComentario,
             };
@@ -94,18 +98,20 @@ function publicar() {
 }
 
 function atualizarFeed() {
-    fetch("/avisos/listar")
+    fetch(`/avisos/listar/${urlManipulada}`)
         .then(function (resposta) {
             if (resposta.ok) {
                 if (resposta.status == 204) {
-                    var feed = document.getElementById("feed_container");
+                    var feed = document.getElementsByClassName("feed_container");
                     var mensagem = document.createElement("span");
                     mensagem.innerHTML = "Nenhum comentario";
+                    console.log('tem comentariossssss ---------')
                     feed.appendChild(mensagem);
                     throw "Nenhum resultado encontrado!!";
                 }
 
                 resposta.json().then(function (resposta) {
+                    console.log('tem comentariossssss ---------')
                     console.log("Dados recebidos: ", JSON.stringify(resposta));
 
                     var feed = document.getElementById("feed_container");

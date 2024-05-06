@@ -1,6 +1,6 @@
 var database = require("../database/config");
 
-function listar() {
+function listar(urlListar) {
     console.log("ACESSEI O AVISO  MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
     var instrucaoSql = `
         SELECT 
@@ -14,9 +14,10 @@ function listar() {
             u.senha
         FROM comentario a
             INNER JOIN usuario u
-                ON a.fkUsuario = u.id;
+                ON a.fkUsuario = u.id where urlArtigo = '${urlListar}';
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    console.log(`model da url ${urlListar}`);
     return database.executar(instrucaoSql);
 }
 
@@ -35,7 +36,7 @@ function pesquisarDescricao(texto) {
         FROM aviso a
             INNER JOIN usuario u
                 ON a.fk_usuario = u.id
-        WHERE a.descricao LIKE '${texto}';
+        WHERE a.descricao LIKE '${texto};
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
@@ -62,10 +63,10 @@ function listarPorUsuario(idUsuario) {
     return database.executar(instrucaoSql);
 }
 
-function publicar(titulo, descricao, idUsuario) {
+function publicar(url, titulo, descricao, idUsuario) {
     console.log("ACESSEI O AVISO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function publicar(): ", titulo, descricao, idUsuario);
     var instrucaoSql = `
-        INSERT INTO comentario (titulo, descricao, fkUsuario) VALUES ('${titulo}', '${descricao}', ${idUsuario});
+        INSERT INTO comentario (urlArtigo ,titulo,descricao, fkUsuario) VALUES ('${url}', '${titulo}', '${descricao}', ${idUsuario});
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
