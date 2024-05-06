@@ -14,7 +14,7 @@
     <title>M87</title>
 </head>
 
-<body>
+<body onload="atualizarFeed()">
 
     <header>
         <a href="#">
@@ -148,7 +148,114 @@
             </div>
         </aside>
     </main>
+    <div class="divPai">
+        <section class="comentarioPai">
+            <div class="comentarios">
+                <h2>faça seu comentário:</h2>
 
+                <label>
+                    <input type="text" id="titulo" name="titulo" maxlength="255" placeholder="Titulo" required>
+                </label>
+                <br>
+                <label>
+                    <textarea name="descricao" id="descricao" cols="100" rows="5" placeholder="comentário..."
+                        maxlength="250" required></textarea>
+                </label>
+                <br>
+                <label>
+                    <button onclick="publicar()" class="login-button">publicar comentário</button>
+
+                    <span id="spanComentario"></span>
+                    <a href="login.html" id="LinkComentario">clique aqui e faça login</a>
+                </label>
+                <h2>comentarios</h2>
+            </div>
+        </section>
+    </div>
+    <div class="div-results">
+        <div id="feed_container" class="feed-container">
+        </div>
+    </div>
+    <main class="main_semelhante">
+        <div class="titulo_article">
+            <h2>.Titulos semelhantes.</h2>
+        </div>
+        <article class="titulos_semenhantes">
+            <section class="section_semelhante">
+                <div class="card">
+                    <div class="button_card">
+                        <button><a href="pag_telescopio.html"> James Web </a></button>
+                    </div>
+                    <div class="header_box">
+                        <div class="imagem">
+                            <img src="img/web.jpg">
+                        </div>
+                        <div class="texto">
+                            <a href="pag_ncg5068.html">
+                                <h2>Um delicado traço de poeira e aglomerados estelares brilhantes atravessa esta imagem
+                                    do Telescópio Espacial James Webb.</h2>
+                                <p>o aglomerado de gás e estrelas brilhantes pertencem à galáxia espiral chamada de NGC
+                                    5068, que esta cerca de 20 milhões de anos-luz da Terra, na constelação de Virgem...
+                                </p><br>
+                                <p></p>
+                                <div class="svg">
+                                    <img src="img/telescopio.png" alt="" class="svg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="card">
+                    <div class="button_card">
+                        <button><a href="pag_telescopio.html"> Telescópio Hubble </a></button>
+                    </div>
+                    <div class="header_box">
+                        <div class="imagem">
+                            <img src="img/Hubble  olha para uma galáxia nebulosa.jpg">
+                        </div>
+                        <div class="texto">
+                            <a href="Messier87.html">
+                                <h2>Hubbler fotografa uma galáxia Distânte</h2>
+                                <p>Nesta imagem está presente a galáxia messier 85, capturada em toda sua gloria
+                                    delicada porem nebulosa</p> <br>
+                                <p>A galáxia contém cerca de 400 bilhões de estrelas, a maioria das quais são muito
+                                    antigas. No entanto, a região central abriga uma população de estrelas relativamente
+                                    jovens de apenas alguns bilhões de anos de idade...</p><br>
+                                <div class="svg">
+                                    <img src="img/telescopio.png" alt="">
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="button_card">
+                        <button><a href="pag_galaxia.html"> Galáxia </a></button>
+                    </div>
+                    <div class="header_box">
+                        <div class="imagem">
+                            <img src="img/quinteto_estephan.jpg">
+                        </div>
+                        <div class="texto"><a href="pag_estephan.html">
+                                <h2>O Quinteto de Stephan</h2>
+                                <p>Um enorme mosaico do Quinteto de Stephan é a maior imagem até hoje do Telescópio
+                                    Espacial James Webb da NASA/ESA/CSA.</p><br>
+                                <p> Esta imagem composta NIRCam-MIRI usa dois dos três filtros MIRI para melhor mostrar
+                                    e diferenciar a poeira quente e a estrutura dentro da galáxia. MIRI vê uma diferença
+                                    distinta de cor entre a poeira nas galáxias versus as ondas de choque entre as
+                                    galáxias em interação...</p><i class="fa-solid fa-earth-europe"
+                                    style="color: #ffffff;"></i>
+                            </a></div>
+                    </div>
+
+                </div>
+            </section>
+        </article>
+    </main>
     <footer>
         <div class="body_footer">
             <div class="texto">
