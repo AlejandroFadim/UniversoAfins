@@ -1,11 +1,3 @@
--- Arquivo de apoio, caso você queira criar tabelas como as aqui criadas para a API funcionar.
--- Você precisa executar os comandos no banco de dados para criar as tabelas,
--- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
-
-/*
-comandos para mysql server
-*/
-
 use universoAfins;
 create table usuario (
 id int primary key auto_increment,
@@ -18,9 +10,10 @@ rua varchar(45),
 bairro varchar(45),
 uf char(2));
 
-
+drop table comentario;
 create table comentario (
 id int primary key auto_increment,
+urlArtigo varchar(45),
 titulo varchar(255),
 descricao varchar(255),
 dtPublic date,
@@ -31,17 +24,14 @@ desc comentario;
 
 select * from comentario;
 
+truncate comentario;
+use aquatech;
+
+select * from usuario;
+SELECT nome, email FROM usuario WHERE email = 'junior@gmail.com' AND senha = '123';
+
+
+
 select * from comentario;
 
-        SELECT 
-            a.id AS idAviso,
-            a.titulo,
-            a.descricao,
-            a.fkUsuario,
-            u.id AS idUsuario,
-            u.nome,
-            u.email,
-            u.senha
-        FROM comentario a
-            INNER JOIN usuario u
-                ON a.fkUsuario = u.id;
+SELECT a.id AS idAviso, a.titulo, a.descricao, a.fk_usuario, u.id AS idUsuario, u.nome, u.email, u.senha FROM aviso a INNER JOIN usuario u ON a.fk_usuario = u.id WHERE u.id = ${idUsuario};
