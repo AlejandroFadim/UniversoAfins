@@ -1,64 +1,116 @@
-*{
+* {
     box-sizing: border-box;
 }
-body{
+
+body {
     margin: 0;
     background: #fff;
     color: #000;
 }
 
-.wrapper_outer{
+.wrapper_outer {
     height: 100vh;
     overflow: hidden;
 }
-.wrapper{
+
+.wrapper {
     height: 100vh;
     overflow-x: hidden;
     perspective: 1px;
 }
-.paralax_section{
+
+.paralax_section {
     min-height: 100vh;
     padding: 50px;
     display: flex;
-    align-items: center;
+    align-items: center; 
     justify-content: center;
     width: 100vw;
     position: relative;
     overflow: hidden;
 }
-.paralaxBG{
+
+@keyframes move {
+    to {}
+
+    from {
+        background-position: 120% 100%;
+    }
+}
+
+.paralaxBG {
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
-    background-size: cover;
     z-index: -1;
     background-position: center;
     min-height: 100%;
     background-attachment: fixed;
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: 50% 50%;
+    animation: move 20s infinite alternate;
+    display: flex;
+    align-items: end;
+    justify-content: right;
 }
 
-.paralaxBG #crab{
+.paralaxBG #crab {
     background-position: left;
     background-size: 10%;
 }
 
 
-.paralax_section h2{
+.paralax_section h2 {
     color: #000000;
     margin: 0;
     font-size: 120px;
     text-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
     text-align: center;
+
     text-transform: uppercase;
-}   
-.modalParalax h2{
+}
+
+.modalParalax h2 {
     color: #fff;
 }
-.modalParalax{
+
+.modalParalax {
     border-radius: 15px;
     background-color: #00000085;
+}
+
+.like {
+    position: absolute;
+    top: 1000;
+    right: 0;
+    border: solid 5px red;
+    width: 150px;
+    height: 150px;
+
+    position: absolute;
+}
+
+@keyframes moveNav {
+    to {}
+
+    from {
+        transform: translate(350px, -300px);
+    }
+}
+
+.like {
+    font-size: 150px;
+
+}
+
+.likeAnimation {
+    animation: moveNav 2s reverse;
+    animation-fill-mode: forwards;
+}
+
+.paralax_section i{
+    font-size: 130px;
 }

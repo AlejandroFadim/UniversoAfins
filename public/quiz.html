@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/paralax.css">
     <script src="./js/script.js"></script>
     <title>Document</title>
@@ -14,9 +17,8 @@
     <div class="wrapper_outer">
         <div class="wrapper">
             <div class="paralax_section">
-                <div class="paralaxBG" style="background-image: url(./img/galaxyParalax.jpg);" id="crab">
+                <div class="paralaxBG" style="background-image: url(./img/galaxyParalax.jpg);">
 
-                    
                 </div>
                 <div class="modalParalax">
                     <h2>Seja bem vindo viajante<br>...</h2>
@@ -27,8 +29,15 @@
     <div class="wrapper_outer">
         <div class="wrapper">
             <div class="paralax_section">
-                <div class="paralaxBG" style="background-image: url(./img/nebulosaCrabNew.png);" id="crab"></div>
-                <h2>Nebulosa<br>Crab</h2>
+                <div class="paralaxBG" style="background-image: url(./img/nebulosaCrabNew.png);" id="crab">
+                </div>
+                <div class="like" onclick="moveNav()">
+                    <a href="./index.html">
+
+                        <i class="fa-solid fa-rocket" class="foguete"></i>
+
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -60,13 +69,8 @@
 
 </html>
 <script>
-    var perguntas = [{
-        questão: 'qual é o maior planeta',
-        resposta: 'jupter'
-    },
-    {
-        questão: 'qual é o menor planeta',
-        resposta: 'mercurio'
+    function moveNav() {
+        var foguete = document.querySelector('.like');
+        foguete.classList.add('likeAnimation');
     }
-    ]
 </script>
