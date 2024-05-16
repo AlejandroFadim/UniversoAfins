@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -16,15 +18,17 @@ body {
 .wrapper {
     height: 100vh;
     overflow-x: hidden;
-    perspective: 1px;
+    /* perspective: 1px; */
 }
 
 .paralax_section {
+    /* border: solid 2px red; */
     min-height: 100vh;
     padding: 50px;
     display: flex;
-    align-items: center; 
-    justify-content: center;
+    justify-content: right;
+    /* flex-direction: row-reverse; */
+    align-items: end;
     width: 100vw;
     position: relative;
     overflow: hidden;
@@ -45,22 +49,19 @@ body {
     right: 0;
     bottom: 0;
     z-index: -1;
-    background-position: center;
+    /* background-position: center; */
     min-height: 100%;
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: 50% 50;
     animation: move 20s infinite alternate;
     display: flex;
     align-items: end;
     justify-content: right;
 }
 
-.paralaxBG #crab {
-    background-position: left;
-    background-size: 10%;
-}
+
 
 
 .paralax_section h2 {
@@ -82,16 +83,6 @@ body {
     background-color: #00000085;
 }
 
-.like {
-    position: absolute;
-    top: 1000;
-    right: 0;
-    border: solid 5px red;
-    width: 150px;
-    height: 150px;
-
-    position: absolute;
-}
 
 @keyframes moveNav {
     to {}
@@ -112,5 +103,8 @@ body {
 }
 
 .paralax_section i{
+    color: #fff;
     font-size: 130px;
+    margin-right: 100px;
 }
+

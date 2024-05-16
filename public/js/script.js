@@ -97,6 +97,7 @@ function publicar() {
     }
 }
 
+
 function atualizarFeed() {
     fetch(`/avisos/listar/${urlManipulada}`)
         .then(function (resposta) {
