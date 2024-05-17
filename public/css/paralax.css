@@ -3,24 +3,37 @@
     padding: 0;
     margin: 0;
 }
-
+html{
+    scroll-snap-type: y mandatory;
+}
 body {
+    scroll-snap-type: y mandatory;
     margin: 0;
     background: #fff;
     color: #000;
 }
 
 .wrapper_outer {
+    scroll-snap-align: start;
     height: 100vh;
     overflow: hidden;
 }
 
+.modalParalax p {
+    color: #fff;
+    font-size: 50px;
+}
 .wrapper {
     height: 100vh;
     overflow-x: hidden;
     /* perspective: 1px; */
 }
 
+#paralaxM{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .paralax_section {
     /* border: solid 2px red; */
     min-height: 100vh;
@@ -75,14 +88,26 @@ body {
 }
 
 .modalParalax h2 {
+    font-size: 42px;
     color: #fff;
 }
-
 .modalParalax {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height: auto;
+    width: 900px;
     border-radius: 15px;
     background-color: #00000085;
+    text-align: center;
+    padding: 50px;
 }
 
+.tlModal{
+    margin-top: -20px;
+    padding: 40px;
+}
 
 @keyframes moveNav {
     to {}

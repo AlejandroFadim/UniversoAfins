@@ -10,7 +10,6 @@ rua varchar(45),
 bairro varchar(45),
 uf char(2));
 
-drop table comentario;
 create table comentario (
 id int primary key auto_increment,
 urlArtigo varchar(45),
@@ -24,8 +23,6 @@ desc comentario;
 
 select * from comentario;
 
-truncate comentario;
-use aquatech;
 
 select * from usuario;
 SELECT nome, email FROM usuario WHERE email = 'junior@gmail.com' AND senha = '123';
