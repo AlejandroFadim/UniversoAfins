@@ -340,3 +340,339 @@ footer{
 }
 
 
+
+@media screen and (max-width: 1163px){
+
+
+    
+    .nav-link{
+        font-size: calc(2vw + 3px);
+        
+    }
+}
+
+
+@media (min-width: 808px) and (max-width: 1109px){
+
+    article{
+        margin: auto;
+        max-width: 69.3125rem;
+        justify-content: center;
+        height: max-content;   
+        padding: 1.25rem;
+    }
+        .middle{
+            margin: auto;
+            width: max-content;
+        }
+        
+        .frame {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; 
+        }
+        
+
+        .frame iframe {
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            width: 100%; 
+            height: 100%;
+            border: none;
+        }
+        
+    iframe{
+        max-width: 100%;
+    } 
+    .middle-h2{
+        width: calc(100vw - 5rem);
+        z-index: 1;
+        height: auto;
+        border-radius: 0px 0px 3.125rem 3.125rem; 
+        text-align: center;
+    }
+
+    section{
+        max-width: 100vw ;
+        margin: auto;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+    }
+.card{
+    box-sizing: border-box;
+    width: max-content;
+    height: max-content;
+    min-width: 23.75rem;
+}
+.texto{
+    text-align: center;
+}
+.texto h2, p {
+    text-align: left;
+}
+.card i{
+    padding: 0.625rem;
+    margin: 0;
+}
+.header_box{
+    border-radius: 0.9375rem;
+    width: calc(100vw - 37.5rem);
+    min-width: 23.75rem;
+}
+.texto-footer h2{
+    padding: 20px;
+}
+}
+
+@media (min-width: 480px) and (max-width: 807px){
+    
+    article{
+        margin: auto;
+        justify-content: center;
+        height: max-content;   
+        padding: 1.25rem;
+    }
+        .middle{
+            margin: auto;
+            width: max-content;
+        }
+        
+        .frame {
+            margin: auto;
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; 
+        }
+        
+
+        .frame iframe {
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            width: 100%; 
+            height: 100%;
+            border: none;
+        }
+
+
+        
+
+
+    iframe{
+        max-width: 100%;
+    } 
+    .middle-h2{
+        width: calc(100vw - 5rem);
+        z-index: 1;
+        margin: 0;
+        height: auto;
+        border-radius: 0px 0px 3.125rem 3.125rem; 
+        text-align: center;
+    }
+
+    #h3_mobile{
+        display: none;
+    }
+    #p_mobile, h4{
+        display: none;
+    }
+    
+    .middle-h2 h2{
+        padding: 0.625rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    .card{
+        box-sizing: border-box;
+        width: max-content;
+        height: max-content;
+    }
+    .texto{
+        text-align: center;
+    }
+    .texto h2, p {
+        text-align: left;
+    }
+    .card i{
+        padding: 0.625rem;
+        margin: 0;
+    }
+    
+    section{
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .header_box{
+        width: calc(100vw - 5rem);
+        
+    }
+    .mobile-menu-icon button{
+        font-size: 2.125rem;
+    }
+    .texto-footer h2{
+        padding: 20px;
+    }
+
+
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+    article{
+        margin: 0px;
+        display: flex;
+        max-width: 100%;
+        height: max-content; 
+        padding: 10px;
+    }
+    .middle {
+        display: none;
+        /* object-fit: cover; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        height: max-content;
+    }
+    .frame{
+        display: none;
+    }
+
+    .middle-h2{
+        display: none;
+        width: calc(100vw - 80px);
+        z-index: 1;
+        margin: 0;
+        height: auto;
+        border-radius: 0px 0px 3.125rem 3.125rem; 
+        text-align: center;
+    }
+
+    #h3_mobile{
+        display: none;
+    }
+    #p_mobile, h4{
+        display: none;
+    }
+    
+    .middle-h2 h2{
+        margin: 0;
+        padding: 0.125rem 0.625rem;
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    .texto{
+        text-align: center;
+
+    }
+    .texto h2, p {
+        text-align: left;
+
+    }
+    .card i{
+        padding: 0.625rem;
+        margin: 0;
+    }
+
+    .tag i{
+        font-size: calc(2vw + 1.25rem);
+    }
+
+    footer{
+        font-size: 0.9375rem;
+    }
+
+    #logo{
+        width: 12.5rem;
+    }
+
+    .texto-footer h2{
+        padding: 20px;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 962px) { 
+    
+    header{
+        justify-content: center;
+    }
+    .redes img{
+        display: none;
+    }
+    .nav-item{
+        display: none;
+    }
+    .login-button{
+        display: none;
+    }
+    .mobile-menu-icon{
+        display: block;
+        margin-left: 0.625rem;
+    }
+    .mobile-menu-icon button{
+        font-size: 2.25rem;
+        background-color: transparent;
+        border: none;
+        color: #ffff;
+        cursor: pointer;
+    }
+    .nav_link li{
+        font-size: 24px;
+
+    }
+
+
+    .mobile-menu ul{
+        font-size: 24px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu .nav-item{
+        
+        display: block;
+        padding-top: 1rem 2rem;
+    }
+
+    .mobile-menu .login-button{
+        display: block;
+        padding: 1rem 2rem;
+    }
+
+    #menu-resposivo{
+        display: none;
+    }
+
+    .mobile-menu .login-button{
+        width: 100%;
+    }
+    .open{
+        display: block;
+    }
+
+    .nav-link{
+        font-size: 24px;
+
+    }
+
+    .texto-footer h2{
+        padding: 20px;
+    }
+} 

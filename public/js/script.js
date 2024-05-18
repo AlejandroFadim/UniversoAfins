@@ -7,10 +7,17 @@ var nomeUsuario = sessionStorage.EMAIL_USUARIO;
 var iptTutlo = document.getElementById("titulo");
 var iptDescricao = document.getElementById("descricao");
 var atualURl = window.location.href;
-
 var urlArtigo = atualURl.split("/");
-var urlManipulada = urlArtigo[urlArtigo.length - 1]
+var urlManipulada = urlArtigo[urlArtigo.length - 1];
 console.log(urlManipulada);
+function menuShow() {
+    let menuMobile = document.querySelector(".mobile-menu");
+    if (menuMobile.classList.contains("open")) {
+        menuMobile.classList.remove("open");
+    } else {
+        menuMobile.classList.add("open");
+    }
+}
 function pegaTags() {
     if (sessionStorage.EMAIL_USUARIO) {
         logBtn.style.display = "none";
@@ -97,13 +104,13 @@ function publicar() {
     }
 }
 
-
 function atualizarFeed() {
     fetch(`/avisos/listar/${urlManipulada}`)
         .then(function (resposta) {
             if (resposta.ok) {
                 if (resposta.status == 204) {
-                    var feed = document.getElementsByClassName("feed_container");
+                    var feed =
+                        document.getElementsByClassName("feed_container");
                     var mensagem = document.createElement("span");
                     mensagem.innerHTML = "Nenhum comentario";
                     feed.appendChild(mensagem);
@@ -111,7 +118,7 @@ function atualizarFeed() {
                 }
 
                 resposta.json().then(function (resposta) {
-                    console.log('tem comentariossssss ---------')
+                    console.log("tem comentariossssss ---------");
                     console.log("Dados recebidos: ", JSON.stringify(resposta));
 
                     var feed = document.getElementById("feed_container");

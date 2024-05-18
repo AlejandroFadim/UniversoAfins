@@ -340,3 +340,376 @@ aside h3 {
 .publicacao-descricao{
     margin: 10px 0;
 }
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    .nav-link{
+        font-size: 22px;
+    }
+    main{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    aside{
+        overflow: hidden;
+        max-width: 750px;
+        width: 100%;
+        height: max-content;
+        flex-wrap: nowrap;
+    }
+    aside img{
+        width: 5rem;
+    }
+    aside h2{
+        margin: 0 0 1.25rem 0;
+        padding: 0px 1.25rem;
+        font-size: 2.125rem;
+    }
+    aside h3{
+        margin: 0;
+        padding: 0px 1.25rem;
+        font-size: 1.375rem;
+    }
+    article{
+        overflow: hidden;
+        max-width: calc(100vw - 2.5rem);
+        width: 100%;
+    }
+    article img{
+        width: 100%;
+        padding: 2.5rem 2.5rem;
+        border-radius: 3.125rem;
+    }
+    .redes-aside i{
+        margin: 1.25rem 0 1.25rem 0;
+    }
+    section img{
+        width: 100%;
+        height: auto;
+        padding: 1.25rem 1.25rem;
+        box-sizing: border-box;
+        border-radius: 1.5625rem;
+    }
+    section h2{
+        font-size: calc(2vw + 1.25rem);
+    }
+    section h3{
+        font-size: calc(2vw + 0.625rem);
+    }
+}
+@media (min-width: 640px) and (max-width: 768px) {
+    header{
+        justify-content: center;
+    }
+    .redes img{
+        display: none;
+    }
+    article{
+        overflow: hidden;
+        max-width: calc(100vw - 2.5rem);
+        width: 100%;
+        border-radius: 0.9375rem;
+    }
+
+    article img{
+        padding: 1.25rem;
+        width: 100%;
+        border-radius: 1.5625rem;
+    }
+
+    main{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    aside{
+        overflow: hidden;
+        max-width: calc(100vw - 2.5rem);
+        height: max-content;
+        flex-wrap: nowrap;
+    }
+
+    aside img{
+        width: 5rem;
+    }
+
+    section h2{
+        font-size: calc(2vw + 1.25rem);
+        padding: 0px 1.25rem;
+    }
+
+    section p{
+        font-size: calc(2vw + 0.625rem);
+        padding: 0px 1.25rem;
+        margin: 1.25rem 0 1.25rem;
+    }
+
+    aside h2{
+        text-align: center;
+        margin-bottom: 1.25rem;
+        padding: 0px 2.5rem;
+        font-size: calc(2vw + 1.25rem);
+    }
+
+    aside h3{
+        text-align: center;
+        margin: 0;
+        padding: 0px 2.5rem;
+        font-size: calc(2vw + 0.625rem);
+    }
+    .redes-aside i{
+        margin: 1.25rem 0 1.25rem 0;
+    }
+
+    section img{
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .titulos_semenhantes{
+        margin: auto;
+        justify-content: center;
+        height: max-content;   
+        padding: 0;
+    }
+    .card{
+        box-sizing: border-box;
+        width: max-content;
+        height: max-content;
+    }
+    .texto{
+        text-align: center;
+    }
+    .texto h2, p {
+        text-align: left;
+    }
+    .card i{
+        padding: 0.625rem;
+        margin: 0;
+    }
+
+}
+@media (min-width: 425px) and (max-width: 639px) {
+    main{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    article{
+        max-width: calc(100vw - 2.5rem);
+        overflow: hidden;
+        border-radius: 0.9375rem;
+    }
+    article img{
+        width: 100%;
+        padding:  1.25rem;
+        border-radius: 1.5625rem;
+    }
+    section h2{
+        font-size: calc(2vw + 1.25rem);
+        padding:  0 1.25rem;
+        margin: 0.625rem;
+    }
+    section p{
+        font-size: calc(2vw + 0.625rem);
+        margin: 0.625rem;
+        padding:  0 10px;
+    }
+    section img{
+        width: 100%;
+        padding: 1.25rem 0px;
+        border-radius: 0;
+    }
+    aside{
+        overflow: hidden;
+        max-width: calc(100vw - 2.5rem);
+        height: max-content;
+        flex-wrap: nowrap;
+        margin: 20px 20px 35px 20px;
+    }
+    aside img{
+        width: 5rem;
+    }
+    aside h2{
+        margin: 0 0 1.25rem 0;
+        padding: 0px 1.25rem;
+        font-size: calc(2vw + 1.25rem);
+    }
+    aside h3{
+        margin: 0;
+        padding: 0px 1.25rem;
+        font-size: calc(2vw + 0.625rem);
+    }
+    .redes-aside i{
+        margin: 1.25rem 0 1.25rem 0;
+    }
+
+    .titulo_article h2{
+        text-align: center;
+        color: #ffffff;
+    }
+    .titulo_article {
+        border-radius: 10px;
+        max-width: 639px;
+        width: 90%;
+        border-top: solid #ffffff 3px ;
+        border-bottom: solid #ffffff 3px;
+        margin: 10px;
+        padding: 10px;
+    }
+    .titulos_semenhantes{
+        margin: auto;
+        justify-content: center;
+        height: max-content;   
+        padding: 0;
+        background: none;
+    }
+
+    .section_semelhante{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .card{
+        box-sizing: border-box;
+        width: max-content;
+        height: max-content;
+    }
+    .texto{
+        text-align: center;
+    }
+    .texto h2, p {
+        text-align: center;
+        padding: 0; 
+        margin: 10; 
+    }
+    .card i{
+        padding: 0.625rem;
+        margin: 0;
+    }
+
+    .header_box{
+        width: calc(100vw - 5rem);
+    }
+
+    .header_box img{
+        padding-top: 20px;
+        padding-bottom: 0;
+    }
+}
+@media (min-width: 250px) and (max-width: 424px){
+    .titulo_article h2{
+        font-size: 20px;
+        text-align: center;
+        color: #ffffff;
+        padding: 10px;
+    }
+    .titulo_article {
+        border-radius: 10px;
+        max-width: 639px;
+        width: 90%;
+        border-top: solid #ffffff 3px ;
+        border-bottom: solid #ffffff 3px;
+        margin: 0;
+        margin-top: 15px;
+        padding: 0;
+    }
+    .titulos_semenhantes{
+        background: none;
+        padding: 0;
+        margin: 0;
+    }
+    .main_semelhante{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .header_box{
+        min-width: 2px;
+        width: calc(100vw - 40px);
+        
+    }
+
+    .header_box img{
+        padding-top: 20px;
+        padding-bottom: 0;
+        margin: 0;
+    }
+
+    .card h2{
+        margin: 10px;
+        padding: 0;
+        font-size: 22px;
+    }
+
+    .card p{
+        padding: 0 10px;
+        font-size: 17px;
+    }
+
+    .card{
+        width: max-content;
+    }
+
+
+    main{
+        flex-direction: column;
+    }
+
+    article{
+        max-width: calc(100vw - 2.5rem);
+        overflow: hidden;
+        border-radius: 0.625rem;
+    }
+    article img{
+        width: 100%;
+        padding: 1.25rem 0;
+        border-radius: 0px;
+    }
+    section img{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+        border-radius: 0;
+    }
+    section h2{
+        font-size: 1.5rem;
+        padding: 0.625rem 0.625rem;
+        margin: 0;
+    }
+    section p{
+        font-size: 1.0625rem;
+        padding: 0.625rem;
+        margin: 0;
+    }
+    aside h2{
+        margin: 0 0 1.25rem 0;
+        padding: 0px 1.25rem;
+        font-size: calc(2vw + 1.25rem);
+    }
+
+    aside h3{
+        margin: 0;
+        padding: 0px 1.25rem;
+        font-size: calc(2vw + 0.625rem);
+    }
+    aside{
+        max-width: calc(100vw - 2.5rem);
+        border-radius: 0.625rem;
+    }
+
+    #logo{
+        width: 12.5rem;
+    }
+
+    footer h2 { 
+        font-size: 1.0625rem;
+    }
+
+    .footer_redes i{
+        font-size: 1.375rem;
+    }
+}
+
