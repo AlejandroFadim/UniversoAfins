@@ -20,8 +20,9 @@ var idFoguteRho = document.querySelector(".likeRho");
 var idFoguteClas = document.querySelector(".likeClas");
 var mainNebu = document.querySelector(".partNebulosa");
 var mainGalaxia = document.querySelector(".partGalaxia");
-function executeEnvento() {}
-function mudarPag(e) {
+var paragrafoNebulosa = document.getElementsByClassName('paragrafoNebulosa')
+
+function mudarPag() {
     setInterval(
         () => {
             mainNebu.style.display = "none";
