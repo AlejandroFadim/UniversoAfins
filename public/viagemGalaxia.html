@@ -25,65 +25,64 @@
 
                     </div>
                     <p>
-                        Escolha sua nebulosa para uma viagem inesquecível pelo cosmos! <br> Clique na nave para escolher a nebulosa que mais gostar.
+                        Escolha sua nebulosa para uma viagem inesquecível pelo cosmos! <br> Clique na nave para escolher
+                        a nebulosa que mais gostar.
                     </p>
-                    <a href="index.html"></a>
-
                 </div>
             </div>
         </div>
     </div>
-    <div class="wrapper_outer">
+    <div class="wrapper_outer" id="crab">
         <div class="wrapper">
             <div class="paralax_section">
-                <div class="paralaxBG" id="bg2" style="background-image: url(./img/nebulosaCrabNew.png);" id="crab">
+                <div class="paralaxBG" id="bg2" style="background-image: url(./img/nebulosaCrabNew.png);">
                 </div>
-                <div class="like" onclick="moveNav()">
+                <div class="likeCrab">
                     <p>
 
-                        <i class="fa-solid fa-rocket" class="foguete"></i>
+                        <i class="fa-solid fa-rocket" id="crab"></i>
 
                     </p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="wrapper_outer">
+    <div class="wrapper_outer" id="ring">
         <div class="wrapper">
             <div class="paralax_section">
                 <div id="bg" class="paralaxBG" style="background-image: url(./img/nebulosa-do-anelNewpng.png);"></div>
-                <div class="like" onclick="moveNav()">
+                <div class="likeRing">
                     <p>
 
-                        <i class="fa-solid fa-rocket" class="foguete"></i>
+                        <i class="fa-solid fa-rocket" id="ring"></i>
 
                     </p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="wrapper_outer">
+    <div class="wrapper_outer" id="Rho">
         <div class="wrapper">
             <div class="paralax_section">
                 <div class="paralaxBG" style="background-image: url(./img/nebulosaRhoNewpng.png);"></div>
-                <div class="like" onclick="moveNav()">
+                <div class="likeRho">
                     <p>
 
-                        <i class="fa-solid fa-rocket" class="foguete"></i>
+                        <i class="fa-solid fa-rocket" class="foguete" id="Rho"></i>
 
                     </p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="wrapper_outer">
+    <div class="wrapper_outer" id="clas">
         <div class="wrapper">
             <div class="paralax_section">
                 <div class="paralaxBG" id="foooi" style="background-image: url(./img/NebulosaClas\ Newpng.png);"></div>
-                <div class="like" onclick="moveNav()">
+                <div class="likeClas">
                     <p>
 
-                        <i class="fa-solid fa-rocket" class="foguete"></i>
+                        <i class="fa-solid fa-rocket" id="clas"></i>
 
                     </p>
                 </div>
@@ -93,19 +92,4 @@
 </body>
 
 </html>
-<script>
-
-
-    function moveNav() {
-        var foguete = document.getElementsByClassName('like');
-
-        for (var index = 0; index < foguete.length; index++) {
-            foguete[index].classList.add('likeAnimation');
-            console.log(foguete[index])
-        }
-
-        setInterval(() => {
-            window.location = 'viagemPlanets.html'
-        }, 2000, 1);
-    }
-</script>
+<script src="./js/pagQuiz.js"></script>
