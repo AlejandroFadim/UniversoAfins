@@ -45,6 +45,7 @@ function mudarPag() {
     );
 }
 function mudarPagGalaxia() {
+
     setInterval(
         () => {
             mainGalaxia.style.display = "none";
@@ -54,7 +55,11 @@ function mudarPagGalaxia() {
         1
     );
 }
+
+
+
 function mudarPagPlaneta() {
+    
     setInterval(
         () => {
             window.location = "../dashboard/dashboard.html"
@@ -63,6 +68,9 @@ function mudarPagPlaneta() {
         1
     );
 }
+
+
+
 function pushJson(nomeNebulosa, nomeID) {
     nomeID.classList.add("likeAnimation");
     value++;
