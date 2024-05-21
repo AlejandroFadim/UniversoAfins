@@ -1,18 +1,24 @@
-var escolhaUsuario = {
-    nebulosas: {
-        id: "",
-        valueNebulosa: "",
-    },
-    galaxias: {
-        nomeGalaxia: "",
-        valueGalaxia: "",
-    },
-    planetas: {
-        nomePlaneta: "",
-        valuePlaneta: "",
-    },
-};
+// var escolhaUsuario = {
+//     nebulosas: {
+//         id: "",
+//         valueNebulosa: "",
+//     },
+//     galaxias: {
+//         nomeGalaxia: "",
+//         valueGalaxia: "",
+//     },
+//     planetas: {
+//         nomePlaneta: "",
+//         valuePlaneta: "",
+//     },
+// };
 
+var escolhaUsuario = {
+    fk_usuario: 1,
+    fk_nebulosa: 1,
+    fk_planeta: 1,
+    fk_galaxia: 1,
+};
 
 var value = 0;
 var valueGalaxia = 0;
@@ -75,8 +81,11 @@ function mudarPagPlaneta() {
 function pushJson(nomeNebulosa, nomeID) {
     nomeID.classList.add("likeAnimation");
     value++;
-    escolhaUsuario.nebulosas.nomeNebulosa = nomeNebulosa;
-    escolhaUsuario.nebulosas.valueNebulosa = value;
+    
+    escolhaUsuario.fk_nebulosa = idNebulosa;
+
+    // escolhaUsuario.nebulosas.nomeNebulosa = nomeNebulosa;
+    // escolhaUsuario.nebulosas.valueNebulosa = value;
     console.log(escolhaUsuario);
     mudarPag();
     console.log(valueGalaxia)
@@ -168,7 +177,8 @@ Eso137.addEventListener("click", (e) => {
 });
 Ngc7496.addEventListener("click", (e) => {
     var nomeGalaxia = e.target.id;
-    pushJsonGalaxia(nomeGalaxia, Ngc7496);
+    var id_formatado = nomeGalaxia.replace('planeta_', '');
+    pushJsonGalaxia(id_formatado, Ngc7496);
 });
 Vv191.addEventListener("click", (e) => {
     var nomeGalaxia = e.target.id;
