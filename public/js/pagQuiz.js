@@ -1,16 +1,8 @@
 var escolhaUsuario = {
-    nebulosas: {
-        id: "",
-        valueNebulosa: "",
-    },
-    galaxias: {
-        nomeGalaxia: "",
-        valueGalaxia: "",
-    },
-    planetas: {
-        nomePlaneta: "",
-        valuePlaneta: "",
-    },
+    fkUsuario: '',
+    fkNebulosa: '',
+    fkGalaxia: '',
+    fkPlaneta: ''
 };
 
 
@@ -27,13 +19,14 @@ var mainPlantas = document.querySelector(".mainPlantas");
 var paragrafoNebulosa = document.getElementsByClassName('paragrafoNebulosa')
 var Eso137 = document.querySelector('.likeEso137')
 var Ngc7496 = document.querySelector('.likeNgc7496')
+var Vv191 = document.querySelector('.likeVv191')
 var Ngc265 = document.querySelector('.likeNgc265')
 var jupter = document.querySelector('.likeJupter')
 var uranu = document.querySelector('.likeUranus')
 var saturno = document.querySelector('.likeSaturno')
 var marte = document.querySelector('.likeMarte')
 
-console.log(valueGalaxia)
+// console.log(valueGalaxia)
 
 function mudarPag() {
     setInterval(
@@ -77,9 +70,9 @@ function pushJson(nomeNebulosa, nomeID) {
     value++;
     escolhaUsuario.nebulosas.nomeNebulosa = nomeNebulosa;
     escolhaUsuario.nebulosas.valueNebulosa = value;
-    console.log(escolhaUsuario);
+    // console.log(escolhaUsuario);
     mudarPag();
-    console.log(valueGalaxia)
+    // console.log(valueGalaxia)
 
     let interval = setInterval(
         () => {
@@ -99,10 +92,10 @@ function pushJsonGalaxia(nomeGalaxia, nomeID) {
     valueGalaxia++;
     escolhaUsuario.galaxias.nomeGalaxia = nomeGalaxia;
     escolhaUsuario.galaxias.valueGalaxia = valueGalaxia
-    console.log(escolhaUsuario);
+    // console.log(escolhaUsuario);
     mudarPagGalaxia();
 
-    console.log(valueGalaxia)
+    // console.log(valueGalaxia)
 
     let interval = setInterval(
         () => {
@@ -123,10 +116,10 @@ function pushJsonPlaneta(nomePlaneta, nomeID) {
     valuePlaneta++;
     escolhaUsuario.planetas.nomePlaneta = nomePlaneta;
     escolhaUsuario.planetas.valuePlaneta = valuePlaneta
-    console.log(escolhaUsuario);
+    // console.log(escolhaUsuario);
     mudarPagPlaneta();
 
-    console.log(valueGalaxia)
+    // console.log(valueGalaxia)
 
     let interval = setInterval(
         () => {
@@ -146,47 +139,55 @@ function pushJsonPlaneta(nomePlaneta, nomeID) {
 }
 
 idFoguteCrab.addEventListener("click", (e) => {
-    var nomeNebulosa = e.target.id;
+    var nomeNebulosa = Number(ee.tardget.id);
+    console.log(  nomeNebulosa)
     pushJson(nomeNebulosa, idFoguteCrab);
 });
 idFoguteRing.addEventListener("click", (e) => {
-    var nomeNebulosa = e.target.id;
+    var nomeNebulosa = Number(e.target.id);
+    console.log( nomeNebulosa)
     pushJson(nomeNebulosa, idFoguteRing);
 });
 idFoguteRho.addEventListener("click", (e) => {
-    var nomeNebulosa = e.target.id;
+    var nomeNebulosa = Number(e.target.id);
+    console.log( nomeNebulosa)
+
     pushJson(nomeNebulosa, idFoguteRho);
 });
 idFoguteClas.addEventListener("click", (e) => {
-    var nomeNebulosa = e.target.id;
+    var nomeNebulosa = Number(e.target.id);
+    console.log( nomeNebulosa)
+
     pushJson(nomeNebulosa, idFoguteClas);
 });
 Eso137.addEventListener("click", (e) => {
-    var nomeGalaxia = e.target.id;
-    console.log(nomeGalaxia)
+    var nomeGalaxia = Number(e.target.id);
+    // console.log(nomeGalaxia)
+    
     pushJsonGalaxia(nomeGalaxia, Eso137);
 });
 Ngc7496.addEventListener("click", (e) => {
-    var nomeGalaxia = e.target.id;
+    var nomeGalaxia = Number(e.target.id);
     pushJsonGalaxia(nomeGalaxia, Ngc7496);
 });
 Vv191.addEventListener("click", (e) => {
-    var nomeGalaxia = e.target.id;
+    var nomeGalaxia = Number(e.target.id);
     pushJsonGalaxia(nomeGalaxia, Vv191);
 });
 jupter.addEventListener("click", (e) => {
-    var nomePlaneta = e.target.id;
+    var nomePlaneta = Number(e.target.id);
     pushJsonPlaneta(nomePlaneta, jupter);
 });
 uranu.addEventListener("click", (e) => {
-    var nomePlaneta = e.target.id;
+    var nomePlaneta = Number(e.target.id);
     pushJsonPlaneta(nomePlaneta, uranu);
 });
 saturno.addEventListener("click", (e) => {
-    var nomePlaneta = e.target.id;
+    var nomePlaneta = Number(e.target.id);
     pushJsonPlaneta(nomePlaneta, saturno);
 });
 marte.addEventListener("click", (e) => {
-    var nomePlaneta = e.target.id;
+    var nomePlaneta = Number(Number(e.target.id));
+    // console.log(nomePlaneta)
     pushJsonPlaneta(nomePlaneta, marte);
 });
