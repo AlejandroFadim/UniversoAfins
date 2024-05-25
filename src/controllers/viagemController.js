@@ -3,7 +3,7 @@ var viagemModel = require("../models/viagemModel");
 
 
 function inserir(req, res) {
-    var fkUsuario = req.body.fkNebulosa;  
+    var fkUsuario = req.body.fkUsuario;  
     var fkNebulosa = req.body.fkNebulosa;  
     var fkGalaxia = req.body.fkGalaxia;  
     var fkPlaneta = req.body.fkPlaneta;  
