@@ -30,7 +30,12 @@
         </div>
     </header>
 
+    <section class="secInicio">
+        <h1>Olá <span id="avatarT"></span>, explorador das estrelas! O gráfico abaixo é um reflexo das preferências cósmicas da nossa comunidade. Ele revela o Top 3 das escolhas mais fascinantes em nebulosas, galáxias e planetas. Cada barra colorida representa quantos de vocês escolheram essas maravilhas do universo. Veja se a sua favorita está no topo e descubra quais são os gostos estelares dos seus colegas entusiastas. Continue explorando e compartilhando suas paixões conosco!</h1>
+    </section>
+
     <main>
+        
         <section class="PaiGrafico">
             <div>
                 <canvas id="myChart"></canvas>
@@ -78,6 +83,7 @@
 
 <script>
     avatar.innerHTML = sessionStorage.NOME_USUARIO;
+    avatarT.innerHTML = sessionStorage.NOME_USUARIO;
 
     let proximaAtualizacao;
     obterDadosGrafico();

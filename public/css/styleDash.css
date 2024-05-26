@@ -4,20 +4,27 @@
 
 body{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     background: linear-gradient(to right bottom ,#0f0119,#3c0149,#00010a,#021b72,#000000);
     background-repeat: no-repeat;
     background-size: cover;
     height: auto; 
     margin: auto;
-    letter-spacing: 0.3px
+    letter-spacing: 0.3px;
+    overflow-x: hidden;
 } 
+
+
 
 header{
     display: flex;
     justify-content: space-between;
     padding: 15px;
-    margin: 20px 5px 20px 15px;
+    width: 100%;
+    margin: 20px 5px 0px 15px;
+    border-bottom: solid 3px #fff;
 }
 #logo{
     width: 250px; 
@@ -33,22 +40,38 @@ header{
     cursor: pointer;
 }
 
+.secInicio{
+    color: #fff;
+    padding: 15px;
+    font-size: 15px;
+}
 main{
     box-sizing: border-box;
     display: flex;
-    height: 100vh;
+    height: 550px;
+    width: 98%;
 }
 .kpi{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
+    justify-content: center;
+    height: fit-content;
     width: 25%;
+    background-color: #fff;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 20px;
+
 }
 .PaiGrafico{
     box-sizing: border-box;
-    height: auto;
+    padding: 20px;
+    height: fit-content;
     width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+
 }
 .box {
     color: #fff;
