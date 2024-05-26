@@ -5,33 +5,26 @@
 body{
     display: flex;
     flex-direction: column;
-    vertical-align: baseline;
     background: linear-gradient(to right bottom ,#0f0119,#3c0149,#00010a,#021b72,#000000);
     background-repeat: no-repeat;
     background-size: cover;
-    max-width: 1440px;
-    width: 100%;
     height: auto; 
     margin: auto;
     letter-spacing: 0.3px
 } 
-body{
-    margin: 0;
-    padding: 0;
-}
+
 header{
     display: flex;
     justify-content: space-between;
     padding: 15px;
-    /* padding: 1.25rem 0; */
-    margin: 1.25rem 0.3125rem 1.25rem 0.9375rem;
+    margin: 20px 5px 20px 15px;
 }
 #logo{
     width: 250px; 
 }
 .login-button button {
     border: none;
-    background-color: #c12525;
+    background-color: #25c169;
     padding: 10px;
     width: 6.25rem;
     border-radius: 0.625rem;
@@ -41,26 +34,28 @@ header{
 }
 
 main{
+    box-sizing: border-box;
     display: flex;
-    /* justify-content: center; */
-    flex-direction: column;
-    align-items: center;
-    border: solid red 5px;
     height: 100vh;
 }
 .kpi{
-    border: solid purple 5px;
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 25%;
 }
 .PaiGrafico{
-    border: solid green 5px;
-
+    box-sizing: border-box;
+    height: auto;
     width: 100%;
-
 }
 .box {
     color: #fff;
     background-color: rgb(80, 10, 146);
+    width: 150px;
+    height: 150px;
+    margin: 10px 0px 0 0px;
+    background-size: cover;
+    text-align: center;
 }

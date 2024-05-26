@@ -39,10 +39,10 @@ insert into galaxia values
 (4,'Vv191');
 
 insert into nebulosa values
-(1,'crab'),
-(2,'ring'),
-(3,'rho'),
-(4,'clas');
+(1,'Crab'),
+(2,'Ring'),
+(3,'Rho'),
+(4,'Clas');
 
 insert into planeta values
 (1,'jupter'),
@@ -50,7 +50,6 @@ insert into planeta values
 (3,'saturno'),
 (4,'marte');
 
-drop table escolhaUsuario;
 create table escolhaUsuario (
 id int primary key auto_increment,
 fkUsuario int,
@@ -78,45 +77,6 @@ insert into escolhaUsuario (fkUsuario,fKNebulosa, fkGalaxia, fkPlaneta ) values
 (1,2,3,2),
 (1,2,3,2),
 (1,2,3,2);
-
--- select count(fkUsuario,fKNebulosa, fkGalaxia, fkPlaneta) from escolhaUsuario;
-
-SELECT fkUsuario, fKNebulosa, fkGalaxia, fkPlaneta, COUNT(*) AS total_ocorrencias
-FROM escolhaUsuario
-GROUP BY fkUsuario, fKNebulosa, fkGalaxia, fkPlaneta
-ORDER BY total_ocorrencias DESC;
-
-
-SELECT
-    (SELECT fkUsuario FROM escolhaUsuario GROUP BY fkUsuario ORDER BY COUNT(*) DESC LIMIT 1) AS fkUsuario_mais_frequente,
-    (SELECT fKNebulosa FROM escolhaUsuario GROUP BY fKNebulosa ORDER BY COUNT(*) DESC LIMIT 1) AS fKNebulosa_mais_frequente,
-    (SELECT fkGalaxia FROM escolhaUsuario GROUP BY fkGalaxia ORDER BY COUNT(*) DESC LIMIT 1) AS fkGalaxia_mais_frequente,
-    (SELECT fkPlaneta FROM escolhaUsuario GROUP BY fkPlaneta ORDER BY COUNT(*) DESC LIMIT 1) AS fkPlaneta_mais_frequente;
-
-
-SELECT
-    (SELECT COUNT(*) FROM escolhaUsuario WHERE fkUsuario = (SELECT fkUsuario FROM escolhaUsuario GROUP BY fkUsuario ORDER BY COUNT(*) DESC LIMIT 1)) AS total_frequencia_fkUsuario,
-    (SELECT fKNebulosa FROM escolhaUsuario GROUP BY fKNebulosa ORDER BY COUNT(*) DESC LIMIT 1) AS fKNebulosa_mais_frequente,
-    (SELECT COUNT(*) FROM escolhaUsuario WHERE fKNebulosa = (SELECT fKNebulosa FROM escolhaUsuario GROUP BY fKNebulosa ORDER BY COUNT(*) DESC LIMIT 1)) AS total_frequencia_fKNebulosa,
-    (SELECT fkGalaxia FROM escolhaUsuario GROUP BY fkGalaxia ORDER BY COUNT(*) DESC LIMIT 1) AS fkGalaxia_mais_frequente,
-    (SELECT COUNT(*) FROM escolhaUsuario WHERE fkGalaxia = (SELECT fkGalaxia FROM escolhaUsuario GROUP BY fkGalaxia ORDER BY COUNT(*) DESC LIMIT 1)) AS total_frequencia_fkGalaxia,
-    (SELECT fkPlaneta FROM escolhaUsuario GROUP BY fkPlaneta ORDER BY COUNT(*) DESC LIMIT 1) AS fkPlaneta_mais_frequente,
-    (SELECT COUNT(*) FROM escolhaUsuario WHERE fkPlaneta = (SELECT fkPlaneta FROM escolhaUsuario GROUP BY fkPlaneta ORDER BY COUNT(*) DESC LIMIT 1)) AS total_frequencia_fkPlaneta;
-    
-    
-
-SELECT
-    (SELECT COUNT(*) FROM escolhaUsuario WHERE fkUsuario = (SELECT fkUsuario FROM escolhaUsuario GROUP BY fkUsuario ORDER BY COUNT(*) DESC LIMIT 1)) AS total_frequencia_fkUsuario,
-    (SELECT n.nome FROM nebulosa n INNER JOIN escolhaUsuario eu ON n.id = eu.fKNebulosa GROUP BY n.nome ORDER BY COUNT(*) DESC LIMIT 1) AS nome_nebulosa_mais_frequente,
-    (SELECT COUNT(*) FROM escolhaUsuario WHERE fKNebulosa = (SELECT fKNebulosa FROM escolhaUsuario GROUP BY fKNebulosa ORDER BY COUNT(*) DESC LIMIT 1)) AS total_frequencia_fKNebulosa,
-    (SELECT g.nome FROM galaxia g INNER JOIN escolhaUsuario eu ON g.id = eu.fkGalaxia GROUP BY g.nome ORDER BY COUNT(*) DESC LIMIT 1) AS nome_galaxia_mais_frequente,
-    (SELECT COUNT(*) FROM escolhaUsuario WHERE fkGalaxia = (SELECT fkGalaxia FROM escolhaUsuario GROUP BY fkGalaxia ORDER BY COUNT(*) DESC LIMIT 1)) AS total_frequencia_fkGalaxia,
-    (SELECT p.nome FROM planeta p INNER JOIN escolhaUsuario eu ON p.id = eu.fkPlaneta GROUP BY p.nome ORDER BY COUNT(*) DESC LIMIT 1) AS nome_planeta_mais_frequente,
-    (SELECT COUNT(*) FROM escolhaUsuario WHERE fkPlaneta = (SELECT fkPlaneta FROM escolhaUsuario GROUP BY fkPlaneta ORDER BY COUNT(*) DESC LIMIT 1)) AS total_frequencia_fkPlaneta;
-
-
-
-
 
 select * from usuario;
 

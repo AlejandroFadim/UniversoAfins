@@ -15,7 +15,7 @@
 </head>
 
 
-<body> 
+<body>
     <header>
         <a href="">
             <img id="logo" src="../img/logo completo - Copia.png" alt="">
@@ -23,23 +23,23 @@
 
         <div class="redes">
             <div class="login-button logo">
-                <a href="avatar">
-                    <button id="avatar" onclick="show()">avatar</button>
+                <a href="avatar" id="b_usuario">
+                    <button id="avatar" ></button>
                 </a>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="kpi">
-            <div class="box" id="kpiNebulosa"></div>
-            <div class="box" id="kpiGalaxia"></div>
-            <div class="box" id="kpiPlaneta"></div>
-        </section>
         <section class="PaiGrafico">
             <div>
                 <canvas id="myChart"></canvas>
             </div>
+        </section>
+        <section class="kpi">
+            <div class="box" id="kpiNebulosa"></div>
+            <div class="box" id="kpiGalaxia"></div>
+            <div class="box" id="kpiPlaneta"></div>
         </section>
     </main>
 
@@ -49,7 +49,7 @@
 </html>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
+<!-- <script>
     const ctx = document.getElementById('myChart');
     var labels = ['crab', 'ngc365', 'jupter']
     kpiNebulosa.innerHTML = labels[0]
@@ -74,10 +74,10 @@
             }
         }
     });
-</script>
+</script> -->
 
-<!-- <script>
-    // b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+<script>
+    avatar.innerHTML = sessionStorage.NOME_USUARIO;
 
     let proximaAtualizacao;
     obterDadosGrafico();
@@ -155,7 +155,7 @@
             data: {
                 labels: labels,
                 datasets: [{
-                    label: '# of Votes',
+                    label: 'DashAstronomica',
                     data: dados,
                     borderWidth: 1
                 }]
@@ -169,7 +169,18 @@
             }
         });
 
-        // Adicionando gráfico criado em div na tela
+        var nebulosa = labels[0]
+        var galaxia = labels[1]
+        var planeta = labels[2]
+        
+        kpiNebulosa.innerHTML = nebulosa;
+        kpiGalaxia.innerHTML = galaxia;
+        kpiPlaneta.innerHTML = planeta;
+        
 
+        kpiNebulosa.style.backgroundImage = `url(../img/Nebulosa${nebulosa}.png)`
+        kpiGalaxia.style.backgroundImage = `url(../img/galaxia${galaxia.toUpperCase()}.jpg)`
+        kpiPlaneta.style.backgroundImage = `url(../img/${planeta}.png)`
+        // Adicionando gráfico criado em div na tela
     }
-</script> -->
+</script>
