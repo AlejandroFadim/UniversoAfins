@@ -58,6 +58,10 @@ header{
 #tiktok{
     margin-right: 0.9375rem;
 }
+#viagem{
+    display: none;
+
+}
 
 .header{
     max-width: 77.5rem;
@@ -90,7 +94,7 @@ header{
 
 .nav-link{
     text-decoration: none;
-    font-size: 1.75rem;
+    font-size: 28px;
     font-weight: 400;
 }
 

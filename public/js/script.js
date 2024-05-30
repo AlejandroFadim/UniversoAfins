@@ -1,4 +1,5 @@
 var logBtn = document.getElementById("btnLogin");
+var navLink = document.getElementsByClassName("nav-link")
 var avatar = document.getElementById("avatar");
 var spanComentario = document.getElementById("spanComentario");
 var LinkComentarioLogin = document.getElementById("LinkComentario");
@@ -9,7 +10,7 @@ var iptDescricao = document.getElementById("descricao");
 var atualURl = window.location.href;
 var urlArtigo = atualURl.split("/");
 var urlManipulada = urlArtigo[urlArtigo.length - 1];
-console.log(urlManipulada);
+console.log(navLink);
 function menuShow() {
     let menuMobile = document.querySelector(".mobile-menu");
     if (menuMobile.classList.contains("open")) {
@@ -24,6 +25,10 @@ function pegaTags() {
         avatar.style.display = "block";
         avatar.style.backgroundColor = "green";
         avatar.innerHTML = sessionStorage.NOME_USUARIO;
+        viagem.style.display = 'block'
+        for(var i = 0; i < navLink.length; i++ ) {
+            navLink[i].style.fontSize = "22px"
+        }
         console.log("usuario existe");
     } else {
         console.log("nao tem usuario");
