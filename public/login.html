@@ -45,7 +45,7 @@
                     <div class="formulario">
                         <div class="campo">
                             <span class="user"><img src="./img/user.png" alt=""></span>
-                            <input id="email_input" type="email" placeholder="Login" required>
+                            <input id="email_input" type="email" placeholder="Email" required>
                         </div>
                         <div class="campo">
 
@@ -87,10 +87,9 @@
 </html>
 
 <script>
-
+    
 
     function entrar() {
-        aguardar();
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
@@ -103,10 +102,15 @@
             return false;
         } else if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
             erroSenha.innerHTML = "Email Invalido";
-        } else if (senhaVar.length <= 8) {
-            erroSenha.innerHTML = "Senha fraca";
+            return false;
+
+        } else if (senhaVar.length < 8) {
+            erroSenha.innerHTML = "Senha errada";
+            return false;
+
         }
         else {
+            aguardar();
             email_input.style.border = "solid green 5px";
             senha_input.style.border = "solid green 5px";
             erroSenha.innerHTML = "";

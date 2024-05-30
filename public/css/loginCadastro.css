@@ -184,7 +184,13 @@ input:hover {
     font-weight: 500;
     font-size: 20px;
 }
-
+#div_aguardar{
+    color: #fff;
+}
 #cadastroWell {
     font-size: 77px;
+}
+
+#div_erros_login{
+    color: #fff;
 }

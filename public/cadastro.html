@@ -30,7 +30,7 @@
       </div>
       <div class="container">
         <div class="bgLateral"></div>
-        <div class="card card-login">
+        <div class="card card-login" id="card">
           <h2 id="cadastroWell">Seja bem vindo</h2>
           <div class="formulario">
             <div class="campo">
@@ -74,7 +74,6 @@
 
 <script>
   function cadastrar() {
-    aguardar();
 
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
@@ -99,15 +98,22 @@
     } else if (nomeVar.length <= 2) {
       erroSenha.innerHTML = "nome invalido";
       nome_input.style.border = "solid red 5px";
+      return false;
+
     }
     else if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
       erroSenha.innerHTML = "Email Invalido";
+      return false;
+
     } else if (senhaVar.length <= 8) {
       erroSenha.innerHTML = "Senha fraca";
+      return false;
+
     } else if (senhaVar != confirmacaoSenhaVar) {
       erroSenha.innerHTML = "Senhas diferentes";
       senha_input.style.border = "solid red 5px";
       confirmacao_senha_input.style.border = "solid red 5px";
+      return false;
 
     }
 
@@ -117,7 +123,7 @@
       nome_input.style.border = "solid green 5px";
       confirmacao_senha_input.style.border = "solid green 5px";
       erroSenha.innerHTML = "";
-      setInterval(sumirMensagem, 5000);
+      aguardar();
     }
 
     // Enviando o valor da nova input
@@ -162,6 +168,6 @@
 
 
   function sumirMensagem() {
-    cardErro.style.display = "none";
+    card.style.display = "none";
   }
 </script>
