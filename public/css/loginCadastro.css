@@ -1,0 +1,190 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* min-width: 100vw; */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    /* border: #e6005a solid 5px; */
+    background-color: #000000;
+}
+.login{
+    /* border: #32e600 solid 5px; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: #000000; */
+
+}
+.container{
+    /* border: #ff00ff solid 5px; */
+    display: flex;
+    width: 100vw;
+    border-radius: 100px;
+    height: 100vh;
+
+}
+.bgLateral{
+    background-image: url(../img/telaLogin4.jpg);
+    width:40%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-login{
+    background: linear-gradient(to right bottom ,#0f0119,#3c0149,#00010a,#021b72,#000000);;
+    /* border: #ff00ff solid 5px; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    width: 60%;
+
+}
+.card-login h2{
+    color: #fff;
+    font-size: 88px;
+    margin: 70px 0 40px 0;
+}
+span{
+    color: #fff;
+}
+
+span img{
+    width: 35px; 
+    margin-right: 15px;
+    color: #fff;
+}
+.campo{
+    margin: 30px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    width: 390px;
+    padding: 10px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+}
+
+.botao{
+    background: #329a38;
+    color: #fff;
+    width: 290px;
+    padding: 12px;
+    border-radius: 15px;
+    transition: 0.1s;
+    cursor: pointer;
+}
+#senha_input{
+    width: 395px;
+}
+
+input:hover {
+    width: 390px;
+
+    border: solid #329a38 4px;
+}
+.botao:hover {
+
+    border: solid #329a38 4px;
+}
+
+.msg a{
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.msg a:hover{
+    text-decoration: underline;
+    /* color: red; */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.loading-div {
+    width: 50px;
+    display: none;
+}
+
+#loading-gif {
+    animation: girar 2s linear infinite;
+    padding: 10px;
+    font-size: 40px;
+    margin: auto;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-div img {
+    height: 50px;
+    width: 50px;
+}
+
+#div_erros_login {
+    display: none
+}
+
+/* FORMULARIO */
+
+.alerta_erro {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card_erro {
+    display: none;
+    background-color: #fff;
+    color: black;
+    width: 230px;
+    position: fixed;
+    border-radius: 4px;
+    border: #e6005a 3px solid;
+    padding: 10px;
+    margin-right: 10%;
+}
+
+.card_erro #mensagem_erro {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#cadastroWell {
+    font-size: 77px;
+}
