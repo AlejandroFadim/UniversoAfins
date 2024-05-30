@@ -1,13 +1,11 @@
-var idUsuario = Number(sessionStorage.ID_USUARIO)
-console.log(idUsuario)
+var idUsuario = Number(sessionStorage.ID_USUARIO);
+console.log(idUsuario);
 var escolhaUsuario = {
     fkUsuario: idUsuario,
-    fkNebulosa: '',
-    fkGalaxia: '',
-    fkPlaneta: ''
+    fkNebulosa: "",
+    fkGalaxia: "",
+    fkPlaneta: "",
 };
-
-
 
 var value = 0;
 var valueGalaxia = 0;
@@ -19,15 +17,15 @@ var idFoguteClas = document.querySelector(".likeClas");
 var mainNebu = document.querySelector(".partNebulosa");
 var mainGalaxia = document.querySelector(".partGalaxia");
 var mainPlantas = document.querySelector(".mainPlantas");
-var paragrafoNebulosa = document.getElementsByClassName('paragrafoNebulosa')
-var Eso137 = document.querySelector('.likeEso137')
-var Ngc7496 = document.querySelector('.likeNgc7496')
-var Vv191 = document.querySelector('.likeVv191')
-var Ngc265 = document.querySelector('.likeNgc265')
-var jupter = document.querySelector('.likeJupter')
-var uranu = document.querySelector('.likeUranus')
-var saturno = document.querySelector('.likeSaturno')
-var marte = document.querySelector('.likeMarte')
+var paragrafoNebulosa = document.getElementsByClassName("paragrafoNebulosa");
+var Eso137 = document.querySelector(".likeEso137");
+var Ngc7496 = document.querySelector(".likeNgc7496");
+var Vv191 = document.querySelector(".likeVv191");
+var Ngc265 = document.querySelector(".likeNgc265");
+var jupter = document.querySelector(".likeJupter");
+var uranu = document.querySelector(".likeUranus");
+var saturno = document.querySelector(".likeSaturno");
+var marte = document.querySelector(".likeMarte");
 
 // console.log(valueGalaxia)
 
@@ -42,7 +40,6 @@ function mudarPag() {
     );
 }
 function mudarPagGalaxia() {
-
     setInterval(
         () => {
             mainGalaxia.style.display = "none";
@@ -53,66 +50,54 @@ function mudarPagGalaxia() {
     );
 }
 
-
-
 function mudarPagPlaneta() {
-
     fetch("/viagem/inserir", {
         method: "POST",
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
         },
         body: JSON.stringify({
             fkUsuario: escolhaUsuario.fkUsuario,
             fkNebulosa: escolhaUsuario.fkNebulosa,
             fkGalaxia: escolhaUsuario.fkGalaxia,
-            fkPlaneta: escolhaUsuario.fkPlaneta
+            fkPlaneta: escolhaUsuario.fkPlaneta,
+        }),
+    })
+        .then(function (resposta) {
+            console.log("ESTOU NO THEN NA PLANETA");
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then((json) => {
+                    console.log(json);
+                    console.log("foi");
+
+                    setInterval(
+                        () => {
+                            window.location = "../dashboard/dashboard.html";
+                        },
+                        2000,
+                        1
+                    );
+                });
+            } else {
+                console.log("deu errado");
+
+                resposta.text().then((texto) => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
         })
-    }).then(function (resposta) {
-        console.log("ESTOU NO THEN NA PLANETA");
-
-        if (resposta.ok) {
-            console.log(resposta);
-
-            resposta.json().then(json => {
-                console.log(json);
-                console.log('foi')
-
-                setInterval(
-                    () => {
-                        window.location = "../dashboard/dashboard.html"
-                    },
-                    2000,
-                    1
-                );
-
-            });
-
-
-        } else {
-
-            console.log("deu errado");
-
-            resposta.text().then(texto => {
-                console.error(texto);
-                finalizarAguardar(texto);
-            });
-        }
-
-    }).catch(function (erro) {
-        console.log(erro);
-    });
-
-
-
-   
+        .catch(function (erro) {
+            console.log(erro);
+        });
 }
-
-
 
 function pushJson(nomeNebulosa, nomeID) {
     nomeID.classList.add("likeAnimation");
-    escolhaUsuario.fkNebulosa = nomeNebulosa
+    escolhaUsuario.fkNebulosa = nomeNebulosa;
     console.log(escolhaUsuario);
     mudarPag();
     // console.log(valueGalaxia)
@@ -124,7 +109,7 @@ function pushJson(nomeNebulosa, nomeID) {
                 behavior: "smooth",
             });
 
-            clearInterval(interval)
+            clearInterval(interval);
         },
         2000,
         1
@@ -132,7 +117,7 @@ function pushJson(nomeNebulosa, nomeID) {
 }
 function pushJsonGalaxia(nomeGalaxia, nomeID) {
     nomeID.classList.add("likeAnimation");
-    escolhaUsuario.fkGalaxia = nomeGalaxia
+    escolhaUsuario.fkGalaxia = nomeGalaxia;
 
     console.log(escolhaUsuario);
     mudarPagGalaxia();
@@ -146,7 +131,7 @@ function pushJsonGalaxia(nomeGalaxia, nomeID) {
                 behavior: "smooth",
             });
 
-            clearInterval(interval)
+            clearInterval(interval);
         },
         2000,
         1
@@ -155,7 +140,7 @@ function pushJsonGalaxia(nomeGalaxia, nomeID) {
 
 function pushJsonPlaneta(nomePlaneta, nomeID) {
     nomeID.classList.add("likeAnimation");
-    escolhaUsuario.fkPlaneta = nomePlaneta
+    escolhaUsuario.fkPlaneta = nomePlaneta;
 
     console.log(escolhaUsuario);
     mudarPagPlaneta();
@@ -169,42 +154,39 @@ function pushJsonPlaneta(nomePlaneta, nomeID) {
                 behavior: "smooth",
             });
 
-            clearInterval(interval)
+            clearInterval(interval);
         },
         2000,
         1
     );
-
-
-
 }
 
 idFoguteCrab.addEventListener("click", (e) => {
     var nomeNebulosa = Number(e.target.id);
-    console.log( nomeNebulosa)
+    console.log(nomeNebulosa);
     pushJson(nomeNebulosa, idFoguteCrab);
 });
 idFoguteRing.addEventListener("click", (e) => {
     var nomeNebulosa = Number(e.target.id);
-    console.log( nomeNebulosa)
+    console.log(nomeNebulosa);
     pushJson(nomeNebulosa, idFoguteRing);
 });
 idFoguteRho.addEventListener("click", (e) => {
     var nomeNebulosa = Number(e.target.id);
-    console.log( nomeNebulosa)
+    console.log(nomeNebulosa);
 
     pushJson(nomeNebulosa, idFoguteRho);
 });
 idFoguteClas.addEventListener("click", (e) => {
     var nomeNebulosa = Number(e.target.id);
-    console.log( nomeNebulosa)
+    console.log(nomeNebulosa);
 
     pushJson(nomeNebulosa, idFoguteClas);
 });
 Eso137.addEventListener("click", (e) => {
     var nomeGalaxia = Number(e.target.id);
     // console.log(nomeGalaxia)
-    
+
     pushJsonGalaxia(nomeGalaxia, Eso137);
 });
 Ngc7496.addEventListener("click", (e) => {
