@@ -1,7 +1,7 @@
 # UniversoAfins
 **Universo Afins: Blog de Astronomia**
 
-Bem-vindo ao README do nosso projeto Universo Afins! Este documento serve como um guia para entender a estrutura, funcionalidade e propósito do nosso blog de astronomia.
+Bem-vindo ao README do projeto Universo Afins! Este documento serve como um guia para entender a estrutura, funcionalidade e propósito do nosso blog de astronomia.
 
 **Visão Geral:**
 
