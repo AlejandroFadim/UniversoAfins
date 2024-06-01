@@ -18,32 +18,13 @@ var mainNebu = document.querySelector(".partNebulosa");
 var mainGalaxia = document.querySelector(".partGalaxia");
 var mainPlantas = document.querySelector(".mainPlantas");
 var paragrafoNebulosa = document.getElementsByClassName("paragrafoNebulosa");
-var Eso137 = document.querySelector(".likeEso137");
-var Ngc7496 = document.querySelector(".likeNgc7496");
-var Vv191 = document.querySelector(".likeVv191");
-var Ngc265 = document.querySelector(".likeNgc265");
-var jupter = document.querySelector(".likeJupter");
-var uranu = document.querySelector(".likeUranus");
-var saturno = document.querySelector(".likeSaturno");
-var marte = document.querySelector(".likeMarte");
 
-// console.log(valueGalaxia)
 
 function mudarPag() {
     setInterval(
         () => {
             mainNebu.style.display = "none";
             mainGalaxia.style.display = "block";
-        },
-        2000,
-        1
-    );
-}
-function mudarPagGalaxia() {
-    setInterval(
-        () => {
-            mainGalaxia.style.display = "none";
-            mainPlantas.style.display = "block";
         },
         2000,
         1
@@ -115,51 +96,7 @@ function pushJson(nomeNebulosa, nomeID) {
         1
     );
 }
-function pushJsonGalaxia(nomeGalaxia, nomeID) {
-    nomeID.classList.add("likeAnimation");
-    escolhaUsuario.fkGalaxia = nomeGalaxia;
 
-    console.log(escolhaUsuario);
-    mudarPagGalaxia();
-
-    // console.log(valueGalaxia)
-
-    let interval = setInterval(
-        () => {
-            window.scroll({
-                top: "0",
-                behavior: "smooth",
-            });
-
-            clearInterval(interval);
-        },
-        2000,
-        1
-    );
-}
-
-function pushJsonPlaneta(nomePlaneta, nomeID) {
-    nomeID.classList.add("likeAnimation");
-    escolhaUsuario.fkPlaneta = nomePlaneta;
-
-    console.log(escolhaUsuario);
-    mudarPagPlaneta();
-
-    // console.log(valueGalaxia)
-
-    let interval = setInterval(
-        () => {
-            window.scroll({
-                top: "0",
-                behavior: "smooth",
-            });
-
-            clearInterval(interval);
-        },
-        2000,
-        1
-    );
-}
 
 idFoguteCrab.addEventListener("click", (e) => {
     var nomeNebulosa = Number(e.target.id);

@@ -24,18 +24,22 @@
         <div class="redes">
             <div class="login-button logo">
                 <a href="avatar" id="b_usuario">
-                    <button id="avatar" ></button>
+                    <button id="avatar"></button>
                 </a>
             </div>
         </div>
     </header>
 
     <section class="secInicio">
-        <h1>Olá <span id="avatarT"></span>, explorador das estrelas! O gráfico abaixo é um reflexo das preferências cósmicas da nossa comunidade. Ele revela o Top 3 das escolhas mais fascinantes em nebulosas, galáxias e planetas. Cada barra colorida representa quantos de vocês escolheram essas maravilhas do universo. Veja se a sua favorita está no topo e descubra quais são os gostos estelares dos seus colegas entusiastas. Continue explorando e compartilhando suas paixões conosco!</h1>
+        <h1>Olá <span id="avatarT"></span>, explorador das estrelas! O gráfico abaixo é um reflexo das preferências
+            cósmicas da nossa comunidade. Ele revela o Top 3 das escolhas mais fascinantes em nebulosas, galáxias e
+            planetas. Cada barra colorida representa quantos de vocês escolheram essas maravilhas do universo. Veja se a
+            sua favorita está no topo e descubra quais são os gostos estelares dos seus colegas entusiastas. Continue
+            explorando e compartilhando suas paixões conosco!</h1>
     </section>
 
     <main>
-        
+
         <section class="PaiGrafico">
             <div>
                 <canvas id="myChart"></canvas>
@@ -46,8 +50,58 @@
             <div class="box" id="kpiGalaxia"></div>
             <div class="box" id="kpiPlaneta"></div>
         </section>
-    </main>
 
+    </main>
+    <section class="secInicio">
+        <h1>Agora vamos ver o Top 3 nebulosas mais escolhidas</h1>
+    </section>
+    <main>
+        <section class="PaiGrafico">
+            <div>
+                <canvas id="myChart2"></canvas>
+            </div>
+        </section>
+        <section class="kpi">
+            <div class="box" id="kpiNebulosa1"></div>
+            <div class="box" id="kpiNebulosa2"></div>
+            <div class="box" id="kpiNebulosa3"></div>
+        </section>
+
+    </main>
+    <section class="secInicio">
+        <h1>Top 3 galáxias mais escolhidas</h1>
+    </section>
+    <main>
+
+        <section class="PaiGrafico">
+            <div>
+                <canvas id="myChart3"></canvas>
+            </div>
+        </section>
+        <section class="kpi">
+            <div class="box" id="kpiGalaxia1"></div>
+            <div class="box" id="kpiGalaxia2"></div>
+            <div class="box" id="kpiGalaxia3"></div>
+        </section>
+
+    </main>
+    <section class="secInicio">
+        <h1>Top 3 planetas mais escolhidas</h1>
+    </section>
+    <main>
+
+        <section class="PaiGrafico">
+            <div>
+                <canvas id="myChart4"></canvas>
+            </div>
+        </section>
+        <section class="kpi">
+            <div class="box" id="kpiPlaneta1"></div>
+            <div class="box" id="kpiPlaneta2"></div>
+            <div class="box" id="kpiPlaneta3"></div>
+        </section>
+
+    </main>
 
 </body>
 
@@ -59,7 +113,7 @@
     var labels = ['crab', 'ngc365', 'jupter']
     kpiNebulosa.innerHTML = labels[0]
     kpiGalaxia.innerHTML = labels[1]
-    kpiPlaneta.innerHTML = labels[2]
+    kpiPlaneta.innerHTML = labels[2]''
 
     new Chart(ctx, {
         type: 'bar',
@@ -87,25 +141,11 @@
 
     let proximaAtualizacao;
     obterDadosGrafico();
-    // O gráfico é construído com três funções:
-    // 1. obterDadosGrafico -> Traz dados do Banco de Dados para montar o gráfico da primeira vez
-    // 2. plotarGrafico -> Monta o gráfico com os dados trazidos e exibe em tela
-    // 3. atualizarGrafico -> Atualiza o gráfico, trazendo novamente dados do Banco
 
-    // Esta função *obterDadosGrafico* busca os últimos dados inseridos em tabela de medidas.
-    // para, quando carregar o gráfico da primeira vez, já trazer com vários dados.
-    // A função *obterDadosGrafico* também invoca a função *plotarGrafico*
-
-    //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
-    //     Para ajustar o "select", ajuste o comando sql em src/models
     function obterDadosGrafico() {
 
 
-        if (proximaAtualizacao != undefined) {
-            clearTimeout(proximaAtualizacao);
-        }
-
-        fetch(`/medidas/ultimas`, { cache: 'no-store' }).then(function (response) {
+        fetch(`/medidas/ultimas`).then(function (response) {
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
@@ -135,15 +175,49 @@
         console.log(resposta);
         var labels = [];
         var dados = [];
+
+        var labelsN = [];
+        var dadosN = [];
+
+
+        var labelsG = [];
+        var dadosG = [];
+
+        var labelsP = [];
+        var dadosP = [];
+
+
         // Inserindo valores recebidos em estrutura para plotar o gráfico
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
-            labels.push(registro.nome_nebulosa_mais_frequente);
-            labels.push(registro.nome_galaxia_mais_frequente);
-            labels.push(registro.nome_planeta_mais_frequente);
-            dados.push(registro.total_frequencia_fKNebulosa);
-            dados.push(registro.total_frequencia_fkGalaxia);
-            dados.push(registro.total_frequencia_fkPlaneta);
+            labels.push(registro.nome_nebulosa_mais_frequente_1);
+            labels.push(registro.nome_galaxia_mais_frequente_1);
+            labels.push(registro.nome_planeta_mais_frequente_1);
+            dados.push(registro.frequencia_nebulosa_mais_frequente_1);
+            dados.push(registro.frequencia_galaxia_mais_frequente_1);
+            dados.push(registro.frequencia_planeta_mais_frequente_1);
+
+            labelsN.push(registro.nome_nebulosa_mais_frequente_1);
+            labelsN.push(registro.nome_nebulosa_mais_frequente_2);
+            labelsN.push(registro.nome_nebulosa_mais_frequente_3);
+            dadosN.push(registro.frequencia_nebulosa_mais_frequente_1);
+            dadosN.push(registro.frequencia_nebulosa_mais_frequente_2);
+            dadosN.push(registro.frequencia_nebulosa_mais_frequente_3);
+
+
+            labelsG.push(registro.nome_galaxia_mais_frequente_1);
+            labelsG.push(registro.nome_galaxia_mais_frequente_2);
+            labelsG.push(registro.nome_galaxia_mais_frequente_3);
+            dadosG.push(registro.frequencia_galaxia_mais_frequente_1);
+            dadosG.push(registro.frequencia_galaxia_mais_frequente_2);
+            dadosG.push(registro.frequencia_galaxia_mais_frequente_3);
+
+            labelsP.push(registro.nome_planeta_mais_frequente_1);
+            labelsP.push(registro.nome_planeta_mais_frequente_2);
+            labelsP.push(registro.nome_planeta_mais_frequente_3);
+            dadosP.push(registro.frequencia_planeta_mais_frequente_1);
+            dadosP.push(registro.frequencia_planeta_mais_frequente_2);
+            dadosP.push(registro.frequencia_planeta_mais_frequente_3);
         }
 
         console.log('----------------------------------------------');
@@ -155,14 +229,22 @@
         console.log('----------------------------------------------');
 
         const ctx = document.getElementById('myChart');
+        const ctx2 = document.getElementById('myChart2');
+        const ctx3 = document.getElementById('myChart3');
+        const ctx4 = document.getElementById('myChart4');
 
         new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: labels,
                 datasets: [{
-                    label: 'DashAstronomica',
+                    label: "Os mais escolhidos",
                     data: dados,
+                    backgroundColor: [
+                        'rgb(84, 5, 255)',
+                        'rgb(218, 165, 32)',
+                        'rgb(92, 107, 192)'
+                    ],
                     borderWidth: 1
                 }]
             },
@@ -175,18 +257,84 @@
             }
         });
 
-        var nebulosa = labels[0]
-        var galaxia = labels[1]
-        var planeta = labels[2]
-        
-        kpiNebulosa.innerHTML = nebulosa;
-        kpiGalaxia.innerHTML = galaxia;
-        kpiPlaneta.innerHTML = planeta;
-        
+        new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: labelsN,
+                datasets: [{
+                    label: 'Top Nebulosas',
+                    data: dadosN,
+                    backgroundColor: [
+                        'rgb(84, 5, 255)',
+                        'rgb(255, 192, 203)',
+                        'rgba(255, 205, 86)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
 
-        kpiNebulosa.style.backgroundImage = `url(../img/Nebulosa${nebulosa}.png)`
-        kpiGalaxia.style.backgroundImage = `url(../img/galaxia${galaxia.toUpperCase()}.jpg)`
-        kpiPlaneta.style.backgroundImage = `url(../img/${planeta}.png)`
-        // Adicionando gráfico criado em div na tela
+            options: {
+                indexAxis: 'y',
+            }
+        });
+        new Chart(ctx3, {
+            type: 'bar',
+            data: {
+                labels: labelsG,
+                datasets: [{
+                    label: 'Top Galaxias',
+                    data: dadosG,
+                    backgroundColor: [
+                        'rgb(218, 165, 32)',
+                        'rgb(255, 192, 203)',
+                        'rgba(255, 205, 86)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+
+            options: {
+                indexAxis: 'y',
+            }
+        });
+        new Chart(ctx4, {
+            type: 'bar',
+            data: {
+                labels: labelsP,
+                datasets: [{
+                    label: 'Top Galaxias',
+                    data: dadosP,
+                    backgroundColor: [
+                        'rgb(92, 107, 192)',
+                        'rgb(255, 192, 203)',
+                        'rgba(255, 205, 86)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+
+            options: {
+                indexAxis: 'y',
+            }
+        });
+
+        insertKPI(kpiNebulosa, kpiGalaxia, kpiPlaneta, labels[0], labels[1], labels[2], "nebulosa", "galaxia", '');
+
+        insertKPI(kpiNebulosa1, kpiNebulosa2, kpiNebulosa3, labelsN[0], labelsN[1], labelsN[2], "nebulosa", "nebulosa", 'nebulosa');
+
+        insertKPI(kpiGalaxia1, kpiGalaxia2, kpiGalaxia3, labelsG[0], labelsG[1], labelsG[2], "galaxia", "galaxia", "galaxia");
+
+        insertKPI(kpiPlaneta1, kpiPlaneta2, kpiPlaneta3, labelsP[0], labelsP[1], labelsP[2], '', '', '');
+
+        function insertKPI(nomeElement1, nomeElement2, nomeElement3, nome1, nome2, nome3, tipo1, tipo2, tipo3) {
+            nomeElement1.innerHTML = nome1;
+            nomeElement2.innerHTML = nome2;
+            nomeElement3.innerHTML = nome3;
+            nomeElement1.style.backgroundImage = `url(../img/${tipo1}${nome1}.jpg)`;
+            nomeElement2.style.backgroundImage = `url(../img/${tipo2}${nome2}.jpg)`;
+            nomeElement3.style.backgroundImage = `url(../img/${tipo3}${nome3}.jpg)`;
+        }
+
     }
+
 </script>

@@ -323,9 +323,11 @@ aside h3 {
 }
 
 .publicacao{
+    padding: 10px 15px;
     border-radius: 0.9375rem;
     background-color: #d1cfcf;
     margin: 10px 0;
+    background-color: rgb(255, 192, 203);
 }
 .publicacao-nome{
     font-size: 32px;

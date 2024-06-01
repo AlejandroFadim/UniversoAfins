@@ -75,7 +75,12 @@ body {
 }
 
 
-
+.astronauta{
+    position: absolute;
+    width: 900px;
+    top: 50%;
+    left: 0;
+}
 
 .paralax_section h2 {
     color: #000000;
@@ -105,9 +110,20 @@ body {
 }
 
 .tlModal{
-    margin-top: -20px;
-    padding: 40px;
+    border-radius: 100px;
+    color: white;
+    max-width: 80%;
+    padding: 15px;
 }
+
+.tlModal p h2{
+    margin: 0;
+    padding: 0;
+    
+}   
+
+
+
 
 @keyframes moveNav {
     to {}
@@ -127,9 +143,41 @@ body {
     animation-fill-mode: forwards;
 }
 
-.paralax_section i{
+i{
     color: #fff;
     font-size: 130px;
     margin-right: 100px;
 }
 
+.DivCarregar{
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    display: none;
+
+}
+#topSite{
+    color: #fff;
+    font-size: 55px;
+}
+.carregar{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    animation: girar 5s linear forwards;
+}
+
+@keyframes girar {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

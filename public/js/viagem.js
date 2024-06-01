@@ -8,61 +8,31 @@ var escolhaUsuario = {
 };
 var contador = 0;
 var bg = document.getElementsByClassName("paralaxBG");
-console.log(contador);
-var value = 0;
-var valueGalaxia = 0;
-var valuePlaneta = 0;
 var idFoguteCrab = document.querySelector(".likeCrab");
 var idFoguteRing = document.querySelector(".likeRing");
 var idFoguteRho = document.querySelector(".likeRho");
 var idFoguteClas = document.querySelector(".likeClas");
-// var mainNebu = document.querySelector(".partNebulosa");
-// var mainGalaxia = document.querySelector(".partGalaxia");
-// var mainPlantas = document.querySelector(".mainPlantas");
-// var paragrafoNebulosa = document.getElementsByClassName("paragrafoNebulosa");
-// var Eso137 = document.querySelector(".likeEso137");
-// var Ngc7496 = document.querySelector(".likeNgc7496");
-// var Vv191 = document.querySelector(".likeVv191");
-// var Ngc265 = document.querySelector(".likeNgc265");
-// var jupter = document.querySelector(".likeJupter");
-// var uranu = document.querySelector(".likeUranus");
-// var saturno = document.querySelector(".likeSaturno");
-// var marte = document.querySelector(".likeMarte");
+var mainNebu = document.querySelector(".partNebulosa");
 
-// console.log(valueGalaxia)
 
 function mudarPag(nomeID) {
-    setInterval(
-        () => {
-            if (contador == 1) {
-                bg[1].style.backgroundImage = "url(../img/galaxiaESO137.jpg)";
-                bg[2].style.backgroundImage = "url(../img/galaxiaNGC749.png)";
-                bg[3].style.backgroundImage = "url(../img/galaxiaNGC265.png)";
-                bg[4].style.backgroundImage = "url(../img/galaxiaVV191.png)";
-                nomeID.classList.remove("likeAnimation");
-            } else if (contador == 2) {
-                bg[1].style.backgroundImage = "url(../img/jupter.png)";
-                bg[2].style.backgroundImage = "url(../img/uranus.png)";
-                bg[3].style.backgroundImage = "url(../img/saturno.jpg)";
-                bg[4].style.backgroundImage = "url(../img/marte.jpg)";
-                nomeID.classList.remove("likeAnimation");
-            } else if (contador == 3) {
-                dashFetch();
-            }
-        },
-        2000,
-        1
-    );
-}
-function mudarPagGalaxia() {
-    setInterval(
-        () => {
-            mainGalaxia.style.display = "none";
-            mainPlantas.style.display = "block";
-        },
-        2000,
-        1
-    );
+    if (contador == 1) {
+        bg[1].style.backgroundImage = "url(../img/galaxiaESO137.jpg)";
+        bg[2].style.backgroundImage = "url(../img/galaxiaNGC749.png)";
+        bg[3].style.backgroundImage = "url(../img/galaxiaNGC265.png)";
+        bg[4].style.backgroundImage = "url(../img/galaxiaVV191.png)";
+        topSite.innerHTML = 'Agora vamos para as galaxias'
+        nomeID.classList.remove("likeAnimation");
+    } else if (contador == 2) {
+        bg[1].style.backgroundImage = "url(../img/jupter.png)";
+        bg[2].style.backgroundImage = "url(../img/uranus.png)";
+        bg[3].style.backgroundImage = "url(../img/saturno.jpg)";
+        bg[4].style.backgroundImage = "url(../img/marte.jpg)";
+        topSite.innerHTML = 'Agora vamos para os planetas'
+        nomeID.classList.remove("likeAnimation");
+    } else if (contador == 3) {
+        dashFetch();
+    }
 }
 
 function dashFetch() {
@@ -109,7 +79,10 @@ function dashFetch() {
             console.log(erro);
         });
 }
-
+function carregando() {
+    DivCarregar.style.display = "block";
+    mainNebu.style.display = "none";
+}
 function pushJson(nomeNebulosa, nomeID) {
     contador += 1;
     console.log(contador, "aaaaa");
@@ -128,21 +101,24 @@ function pushJson(nomeNebulosa, nomeID) {
         escolhaUsuario.fkPlaneta = nomeNebulosa;
         console.log(escolhaUsuario);
     }
-    mudarPag(nomeID);
+
     // console.log(valueGalaxia)
 
-    let interval = setInterval(
-        () => {
+    let interval = setInterval(() => {
+        setTimeout(carregando);
+        setTimeout(() => {
             window.scroll({
                 top: "0",
                 behavior: "smooth",
             });
-
-            clearInterval(interval);
-        },
-        2000,
-        3
-    );
+        }, 1500);
+        setTimeout(() => {
+            DivCarregar.style.display = "none";
+            mainNebu.style.display = "block";
+        }, 2000);
+        setTimeout(mudarPag(nomeID), 3000);
+        clearInterval(interval);
+    }, 2000);
 }
 
 idFoguteCrab.addEventListener("click", (e) => {
