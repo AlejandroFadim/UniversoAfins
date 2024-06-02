@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.infos{
+    width: 900px;
+    height: 900px;
+    border: solid red 5px;
+}
+.text{
+    color: black;
+}
+
+iframe{
+    width: 560px;
+    height: 315px;
+}
+
+.img{
+    width: 560px;
+    height: 315px;
+}
