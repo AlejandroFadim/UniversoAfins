@@ -17,15 +17,12 @@ function req() {
                 var url = jsonAtual.url;
                 var texto = jsonAtual.explanation;
                 var title = jsonAtual.title;
-                var divInfo = document.createElement("div");
+                var divInfo = document.createElement("section");
                 main.appendChild(divInfo);
-
-                var h1Info = document.createElement("h1");
-                divInfo.appendChild(h1Info);
-                h1Info.innerHTML = title;
 
                 if (jsonAtual.media_type == "video") {
                     var divIframe = document.createElement("iframe");
+                    divIframe.className = "iframe";
                     divIframe.src = url;
 
                     divInfo.appendChild(divIframe);
@@ -34,9 +31,17 @@ function req() {
                     divImg.src = url;
                     divInfo.appendChild(divImg);
                 }
-                var descInfo = document.createElement("div");
+                var h1Info = document.createElement("h2");
+                var h1Section = document.createElement("section");
+                h1Section.appendChild(h1Info);
+                main.appendChild(h1Section);
+
+                h1Info.innerHTML = title;
+                var DescSection = document.createElement("section");
+                var descInfo = document.createElement("p");
                 descInfo.innerHTML = texto;
-                divInfo.appendChild(descInfo);
+                DescSection.appendChild(descInfo);
+                main.appendChild(DescSection);
             }
         });
 }
