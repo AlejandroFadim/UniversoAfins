@@ -154,29 +154,14 @@ function atualizarFeed() {
                         spanTitulo.className = "publicacao-titulo";
                         divDescricao.className = "publicacao-descricao";
 
-                        // divButtons.className = "div-buttons";
-
-                        // btnEditar.className = "publicacao-btn-editar";
-                        // btnEditar.id = "btnEditar" + publicacao.idAviso;
-                        // btnEditar.setAttribute(
-                        //     "onclick",
-                        //     `editar(${publicacao.idAviso})`
-                        // );
-
-                        // btnDeletar.className = "publicacao-btn-editar";
-                        // btnDeletar.id = "btnDeletar" + publicacao.idAviso;
-                        // btnDeletar.setAttribute(
-                        //     "onclick",
-                        //     `deletar(${publicacao.idAviso})`
-                        // );
+                       
 
                         divPublicacao.appendChild(spanID);
                         divPublicacao.appendChild(spanNome);
                         divPublicacao.appendChild(spanTitulo);
                         divPublicacao.appendChild(divDescricao);
                         divPublicacao.appendChild(divButtons);
-                        // divButtons.appendChild(btnEditar);
-                        // divButtons.appendChild(btnDeletar);
+                     
                         feed.appendChild(divPublicacao);
                     }
 

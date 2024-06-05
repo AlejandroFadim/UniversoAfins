@@ -21,14 +21,14 @@ function mudarPag(nomeID) {
         bg[2].style.backgroundImage = "url(../img/galaxiaNGC749.png)";
         bg[3].style.backgroundImage = "url(../img/galaxiaNGC265.png)";
         bg[4].style.backgroundImage = "url(../img/galaxiaVV191.png)";
-        topSite.innerHTML = 'Agora vamos para as galaxias'
+        topSite.innerHTML = 'Agora vamos para as galaxias';
         nomeID.classList.remove("likeAnimation");
     } else if (contador == 2) {
         bg[1].style.backgroundImage = "url(../img/jupter.png)";
         bg[2].style.backgroundImage = "url(../img/uranus.png)";
         bg[3].style.backgroundImage = "url(../img/saturno.jpg)";
         bg[4].style.backgroundImage = "url(../img/marte.jpg)";
-        topSite.innerHTML = 'Agora vamos para os planetas'
+        topSite.innerHTML = 'Agora vamos para os planetas';
         nomeID.classList.remove("likeAnimation");
     } else if (contador == 3) {
         dashFetch();
@@ -85,26 +85,19 @@ function carregando() {
 }
 function pushJson(nomeNebulosa, nomeID) {
     contador += 1;
-    console.log(contador, "aaaaa");
     if (contador == 1) {
         nomeID.classList.add("likeAnimation");
         escolhaUsuario.fkNebulosa = nomeNebulosa;
-        console.log("to 1");
-        console.log(escolhaUsuario);
     } else if (contador == 2) {
         nomeID.classList.add("likeAnimation");
         escolhaUsuario.fkGalaxia = nomeNebulosa;
-        console.log(escolhaUsuario);
-        console.log("deu certo to 2");
     } else if (contador == 3) {
         nomeID.classList.add("likeAnimation");
         escolhaUsuario.fkPlaneta = nomeNebulosa;
-        console.log(escolhaUsuario);
     }
 
-    // console.log(valueGalaxia)
 
-    let interval = setInterval(() => {
+    var interval = setInterval(() => {
         setTimeout(carregando);
         setTimeout(() => {
             window.scroll({
@@ -123,18 +116,14 @@ function pushJson(nomeNebulosa, nomeID) {
 
 idFoguteCrab.addEventListener("click", (e) => {
     var nomeNebulosa = Number(e.target.id);
-    console.log(nomeNebulosa);
     pushJson(nomeNebulosa, idFoguteCrab);
 });
 idFoguteRing.addEventListener("click", (e) => {
     var nomeNebulosa = Number(e.target.id);
-    console.log(nomeNebulosa);
     pushJson(nomeNebulosa, idFoguteRing);
 });
 idFoguteRho.addEventListener("click", (e) => {
     var nomeNebulosa = Number(e.target.id);
-    console.log(nomeNebulosa);
-
     pushJson(nomeNebulosa, idFoguteRho);
 });
 idFoguteClas.addEventListener("click", (e) => {
@@ -143,38 +132,3 @@ idFoguteClas.addEventListener("click", (e) => {
 
     pushJson(nomeNebulosa, idFoguteClas);
 });
-// Eso137.addEventListener("click", (e) => {
-//     var nomeGalaxia = Number(e.target.id);
-//     // console.log(nomeGalaxia)
-
-//     pushJsonGalaxia(nomeGalaxia, Eso137);
-// });
-// Ngc7496.addEventListener("click", (e) => {
-//     var nomeGalaxia = Number(e.target.id);
-//     pushJsonGalaxia(nomeGalaxia, Ngc7496);
-// });
-// Ngc265.addEventListener("click", (e) => {
-//     var nomeGalaxia = Number(e.target.id);
-//     pushJsonGalaxia(nomeGalaxia, Ngc265);
-// });
-// Vv191.addEventListener("click", (e) => {
-//     var nomeGalaxia = Number(e.target.id);
-//     pushJsonGalaxia(nomeGalaxia, Vv191);
-// });
-// jupter.addEventListener("click", (e) => {
-//     var nomePlaneta = Number(e.target.id);
-//     pushJsonPlaneta(nomePlaneta, jupter);
-// });
-// uranu.addEventListener("click", (e) => {
-//     var nomePlaneta = Number(e.target.id);
-//     pushJsonPlaneta(nomePlaneta, uranu);
-// });
-// saturno.addEventListener("click", (e) => {
-//     var nomePlaneta = Number(e.target.id);
-//     pushJsonPlaneta(nomePlaneta, saturno);
-// });
-// marte.addEventListener("click", (e) => {
-//     var nomePlaneta = Number(Number(e.target.id));
-//     // console.log(nomePlaneta)
-//     pushJsonPlaneta(nomePlaneta, marte);
-// });

@@ -1,139 +1,172 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon-16x16.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/paginas.css">
     <script src="js/script.js" defer></script>
     <title>M87</title>
 </head>
+
 <body onload="atualizarFeed()">
-    
-        <header>
-            <a href="#">
-                <img id="logo" src="img/logo completo - Copia.png" alt="">
-            </a>
 
+    <header>
+        <a href="#">
+            <img id="logo" src="img/logo completo - Copia.png" alt="">
+        </a>
+
+        <div class="redes">
             <div class="redes">
-                <div class="redes">
-                    <div class="login-button logo" id="logo">
-                        <a href="login.html">
-                            <button id="btnLogin" >login</button>
-                        </a>
-                        <a href="avatar">
-                            <button id="avatar" >avatar</button>
-                        </a>
-                    </div>
+                <div class="login-button logo" id="logo">
+                    <a href="login.html">
+                        <button id="btnLogin">login</button>
+                    </a>
+                    <a href="avatar">
+                        <button id="avatar">avatar</button>
+                    </a>
                 </div>
             </div>
-        </header>
-        <!-- <div class="header"> -->
-            <nav class="nav-bar">
-                <div class="mobile-menu-icon">
-                    <button onclick="menuShow()">&#9776;</button>
-                </div>
-                <div class="nav-list">
-                    <ul>
-                        <li class="nav-item"><a href="index.html" class="nav-link" id="Inicio">Início</a></li>
-                        <li class="nav-item"><a href="pag_galaxia.html" class="nav-link">Galáxia</a></li>
-                        <li class="nav-item"><a href="pag_buraconegro.html" class="nav-link">Buraco Negro</a></li>
-                        <li class="nav-item"><a href="Pag_planetas.html" class="nav-link">Planetas</a></li>
-                        <li class="nav-item"><a href="pag_telescopio.html" class="nav-link">Telescópios espaciais</a></li>
-                        <li class="nav-item"><a href="pag_nebulosas.html" class="nav-link">Nebulosas</a></li>
-                    </ul>
-            </nav>
-            <div class="mobile-menu">
-                <ul>
-                    <li class="nav-item"><a href="index.html" class="nav-link" id="Inicio">Início</a></li>
-                    <li class="nav-item"><a href="pag_galaxia.html" class="nav-link">Galáxia</a></li>
-                    <li class="nav-item"><a href="pag_buraconegro.html" class="nav-link">Buraco Negro</a></li>
-                    <li class="nav-item"><a href="Pag_planetas.html" class="nav-link">Planetas</a></li>
-                    <li class="nav-item"><a href="pag_telescopio.html" class="nav-link">Telescópios espaciais</a></li>
-                    <li class="nav-item"><a href="pag_nebulosas.html" class="nav-link">Nebulosas</a></li>
-                </ul>
-            </div>
-            <div class="tag">
-                <i class="fa-solid fa-rocket" class="foguete"></i>
-            </div>
+        </div>
+    </header>
+    <!-- <div class="header"> -->
+    <nav class="nav-bar">
+        <div class="mobile-menu-icon">
+            <button onclick="menuShow()">&#9776;</button>
+        </div>
+        <div class="nav-list">
+            <ul>
+                <li class="nav-item"><a href="index.html" class="nav-link" id="Inicio">Início</a></li>
+                <li class="nav-item"><a href="pag_galaxia.html" class="nav-link">Galáxia</a></li>
+                <li class="nav-item"><a href="pag_buraconegro.html" class="nav-link">Buraco Negro</a></li>
+                <li class="nav-item"><a href="Pag_planetas.html" class="nav-link">Planetas</a></li>
+                <li class="nav-item"><a href="pag_telescopio.html" class="nav-link">Telescópios espaciais</a></li>
+                <li class="nav-item"><a href="pag_nebulosas.html" class="nav-link">Nebulosas</a></li>
+                <li class="nav-item" id="viagem"><a href="viagemCosmica.html" class="nav-link">Viagem Cómisca</a></li>
+
+            </ul>
+    </nav>
+    <div class="mobile-menu">
+        <ul>
+            <li class="nav-item"><a href="index.html" class="nav-link" id="Inicio">Início</a></li>
+            <li class="nav-item"><a href="pag_galaxia.html" class="nav-link">Galáxia</a></li>
+            <li class="nav-item"><a href="pag_buraconegro.html" class="nav-link">Buraco Negro</a></li>
+            <li class="nav-item"><a href="Pag_planetas.html" class="nav-link">Planetas</a></li>
+            <li class="nav-item"><a href="pag_telescopio.html" class="nav-link">Telescópios espaciais</a></li>
+            <li class="nav-item"><a href="pag_nebulosas.html" class="nav-link">Nebulosas</a></li>
+        </ul>
+    </div>
+    <div class="tag">
+        <i class="fa-solid fa-rocket" class="foguete"></i>
+    </div>
     <main>
-            <article>
-                <img src="img/imagem-bruta-pag-m87.jpg" alt="">
-                <section>
-                    <h2>
+        <article>
+            <img src="img/imagem-bruta-pag-m87.jpg" alt="">
+            <section>
+                <h2>
                     O Buraco Negro M87: um misterio cosmico revelado
-                    </h2>
-                </section>
+                </h2>
+            </section>
 
-                <section>
-                    
-                    <p>
-                    Os buracos negros são objetos fascinantes e misteriosos no universo. Suas propriedades peculiares desafiam nossa compreensão atual da física e nos instigam a explorar os limites do conhecimento humano. Um dos buracos negros mais estudados e notáveis é o M87, localizado na galáxia Messier 87. Neste artigo, mergulharemos no fascinante mundo do buraco negro M87, desde sua descoberta até sua localização e relação com sua galáxia hospedeira.
-                    </p>
-                </section>
-                
-                <section>
-                    
-                    <h2>Descoberta</h2>
-                    <img src="img/telecope-eht.jpg" alt="">
-                    <p>
-                    A descoberta do buraco negro M87 remonta a décadas atrás, mas foi apenas em abril de 2019 que a humanidade teve sua primeira imagem direta de um buraco negro. O Projeto Event Horizon Telescope (EHT) foi o responsável por esse marco histórico. Utilizando uma rede de radiotelescópios em todo o mundo, os astrônomos conseguiram capturar a imagem do horizonte de eventos do buraco negro M87, revelando sua forma distinta e o anel brilhante de luz ao seu redor.
-                    </p>
-                </section>
-                
-                <section>
-                    <h2>Localização</h2>
-                    <img src="img/messier87.jpg" alt="">
-                    <p>
-                    O buraco negro M87 está localizado na galáxia Messier 87, também conhecida como M87, na constelação de Virgem. Essa galáxia massiva é uma das maiores e mais brilhantes do Aglomerado de Virgem, situado a cerca de 55 milhões de anos-luz da Terra. Para se ter uma ideia da distância colossal, um ano-luz representa a distância percorrida pela luz em um ano, viajando a velocidade de 300.000 km/s.
-                    </p>
-                </section>
-                
-                <section>
-                    <h2>Características do Buraco Negro M87</h2>
-                    <img src="img/caracterm87.jpg" alt="">
+            <section>
 
-                    <p>
-                    O buraco negro M87 tem uma massa estimada em cerca de 6,5 bilhões de vezes a massa do nosso sol. Essa imensa quantidade de massa comprimida em um volume extremamente pequeno resulta em uma gravidade inimaginável, capaz de distorcer o espaço-tempo ao seu redor. A massa e o poder de atração gravitacional do M87 são os principais responsáveis pela formação do jato de matéria relativística que emerge dele. Esse jato é um dos mais intensos já observados e se estende por milhares de anos-luz na galáxia.
-                    </p>
-                </section>
-                
-                <section>
-                    
-                    <h2>A Galáxia Messier 87</h2>
-                    <img src="img/PIA23122~orig.jpg" alt="">  
-                    <p>
-                    A galáxia Messier 87, que abriga o buraco negro M87, é uma gigante elíptica situada no centro do Aglomerado de Virgem. Ela contém bilhões de estrelas e um grande número de aglomerados estelares. M87 é conhecida por sua emissão de rádio intensa e possui um núcleo galáctico ativo. O buraco negro supermassivo M87 desempenha um papel crucial na formação e evolução dessa galáxia.
-                    </p>
-                </section>
-                
-                <section>
-                    <h2>Importância Científica</h2>
-                    <p>
-                    O estudo do buraco negro M87 tem implicações significativas para a astrofísica e a compreensão da evolução das galáxias. A imagem obtida pelo EHT forneceu evidências concretas para a existência dos buracos negros, confirmando as previsões teóricas de Albert Einstein. Além disso, o M87 é um laboratório natural para estudar a física extrema governada pela relatividade geral de Einstein e a interação entre buracos negros e a matéria ao seu redor.
-                    </p>
-                </section>
-            </article>
+                <p>
+                    Os buracos negros são objetos fascinantes e misteriosos no universo. Suas propriedades peculiares
+                    desafiam nossa compreensão atual da física e nos instigam a explorar os limites do conhecimento
+                    humano. Um dos buracos negros mais estudados e notáveis é o M87, localizado na galáxia Messier 87.
+                    Neste artigo, mergulharemos no fascinante mundo do buraco negro M87, desde sua descoberta até sua
+                    localização e relação com sua galáxia hospedeira.
+                </p>
+            </section>
 
-            <aside class="sticky-aside">
-                <img src="img/logo=blog=pag.jpg" alt="">
-                
-                <h2>Vislumbre a grandeza do universo:</h2> <h3> Vídeos incríveis que o deixarão maravilhado todas as semanas no YouTube + notícias astronômicas diárias para alimentar sua curiosidade no instagram e facebook! </h3>
-                <div class="redes-aside">
+            <section>
 
-                    <a href="https://www.youtube.com/channel/UCuz9FePPtCziiGhhlJ6OMtw" target="_blank"><i class="fa-brands fa-youtube" style="color: #000000;"></i></a>
+                <h2>Descoberta</h2>
+                <img src="img/telecope-eht.jpg" alt="">
+                <p>
+                    A descoberta do buraco negro M87 remonta a décadas atrás, mas foi apenas em abril de 2019 que a
+                    humanidade teve sua primeira imagem direta de um buraco negro. O Projeto Event Horizon Telescope
+                    (EHT) foi o responsável por esse marco histórico. Utilizando uma rede de radiotelescópios em todo o
+                    mundo, os astrônomos conseguiram capturar a imagem do horizonte de eventos do buraco negro M87,
+                    revelando sua forma distinta e o anel brilhante de luz ao seu redor.
+                </p>
+            </section>
+
+            <section>
+                <h2>Localização</h2>
+                <img src="img/messier87.jpg" alt="">
+                <p>
+                    O buraco negro M87 está localizado na galáxia Messier 87, também conhecida como M87, na constelação
+                    de Virgem. Essa galáxia massiva é uma das maiores e mais brilhantes do Aglomerado de Virgem, situado
+                    a cerca de 55 milhões de anos-luz da Terra. Para se ter uma ideia da distância colossal, um ano-luz
+                    representa a distância percorrida pela luz em um ano, viajando a velocidade de 300.000 km/s.
+                </p>
+            </section>
+
+            <section>
+                <h2>Características do Buraco Negro M87</h2>
+                <img src="img/caracterm87.jpg" alt="">
+
+                <p>
+                    O buraco negro M87 tem uma massa estimada em cerca de 6,5 bilhões de vezes a massa do nosso sol.
+                    Essa imensa quantidade de massa comprimida em um volume extremamente pequeno resulta em uma
+                    gravidade inimaginável, capaz de distorcer o espaço-tempo ao seu redor. A massa e o poder de atração
+                    gravitacional do M87 são os principais responsáveis pela formação do jato de matéria relativística
+                    que emerge dele. Esse jato é um dos mais intensos já observados e se estende por milhares de
+                    anos-luz na galáxia.
+                </p>
+            </section>
+
+            <section>
+
+                <h2>A Galáxia Messier 87</h2>
+                <img src="img/PIA23122~orig.jpg" alt="">
+                <p>
+                    A galáxia Messier 87, que abriga o buraco negro M87, é uma gigante elíptica situada no centro do
+                    Aglomerado de Virgem. Ela contém bilhões de estrelas e um grande número de aglomerados estelares.
+                    M87 é conhecida por sua emissão de rádio intensa e possui um núcleo galáctico ativo. O buraco negro
+                    supermassivo M87 desempenha um papel crucial na formação e evolução dessa galáxia.
+                </p>
+            </section>
+
+            <section>
+                <h2>Importância Científica</h2>
+                <p>
+                    O estudo do buraco negro M87 tem implicações significativas para a astrofísica e a compreensão da
+                    evolução das galáxias. A imagem obtida pelo EHT forneceu evidências concretas para a existência dos
+                    buracos negros, confirmando as previsões teóricas de Albert Einstein. Além disso, o M87 é um
+                    laboratório natural para estudar a física extrema governada pela relatividade geral de Einstein e a
+                    interação entre buracos negros e a matéria ao seu redor.
+                </p>
+            </section>
+        </article>
+
+        <aside class="sticky-aside">
+            <img src="img/logo=blog=pag.jpg" alt="">
+
+            <h2>Vislumbre a grandeza do universo:</h2>
+            <h3> Vídeos incríveis que o deixarão maravilhado todas as semanas no YouTube + notícias astronômicas diárias
+                para alimentar sua curiosidade no instagram e facebook! </h3>
+            <div class="redes-aside">
+
+                <a href="https://www.youtube.com/channel/UCuz9FePPtCziiGhhlJ6OMtw" target="_blank"><i
+                        class="fa-brands fa-youtube" style="color: #000000;"></i></a>
 
 
-                    
-                    <a href="https://instagram.com/universoafins?igshid=MzRlODBiNWFlZA==" target="_blank"><i class="fa-brands fa-instagram" style="color: #000000;"></i></a>
-                    <a href="#" target="_blank"><i class="fa-brands fa-facebook" style="color: #000000;"></i></a>
-                    
-                </div>
-            </aside>
+
+                <a href="https://instagram.com/universoafins?igshid=MzRlODBiNWFlZA==" target="_blank"><i
+                        class="fa-brands fa-instagram" style="color: #000000;"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-facebook" style="color: #000000;"></i></a>
+
+            </div>
+        </aside>
     </main>
-    
+
     <div class="divPai">
         <section class="comentarioPai">
             <div class="comentarios">
@@ -168,25 +201,30 @@
     <footer>
         <div class="body_footer">
             <div class="texto">
-            <h2>Nada me assusta e me fascina mais do que o universo: a incerteza mais bela na qual estamos inseridos. <cite>Albert Einstein</cite></h2>
+                <h2>Nada me assusta e me fascina mais do que o universo: a incerteza mais bela na qual estamos
+                    inseridos. <cite>Albert Einstein</cite></h2>
             </div>
             <div class="desenvolvdo">
                 <a href="https://github.com/BoemiaDEV" target="_blank">
                     <h2> Desenvolvdo por BoemiaDEV <i class="fa-brands fa-github"></i></h2>
                 </a>
-            
-            </div>
 
             </div>
-            <div class="footer_redes">
-                <div class="redes_filho">
-                    <a href="https://instagram.com/universoafins?igshid=MzRlODBiNWFlZA==" id="insta"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/channel/UCuz9FePPtCziiGhhlJ6OMtw" id="youtube_footer"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://www.tiktok.com/@universoafins?_t=8e6DfzFbV6k&_r=1" id="tiktok"><i class="fa-brands fa-tiktok"></i></a>
-                </div>
-                
+
+        </div>
+        <div class="footer_redes">
+            <div class="redes_filho">
+                <a href="https://instagram.com/universoafins?igshid=MzRlODBiNWFlZA==" id="insta"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCuz9FePPtCziiGhhlJ6OMtw" id="youtube_footer"><i
+                        class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@universoafins?_t=8e6DfzFbV6k&_r=1" id="tiktok"><i
+                        class="fa-brands fa-tiktok"></i></a>
+            </div>
+
         </div>
     </footer>
 
 </body>
+
 </html>
