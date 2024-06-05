@@ -4,9 +4,6 @@ var iframe = document.getElementById("video");
 var titulo = document.getElementById("title");
 var main = document.getElementById("mainI");
 var date = "2024-06-04";
-var data = Date.now()
-var atual = new date(data)
-console.log(atual)
 var date2 = "2024-05-29";
 function req() {
     fetch(

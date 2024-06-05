@@ -108,33 +108,6 @@
 </html>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<!-- <script>
-    const ctx = document.getElementById('myChart');
-    var labels = ['crab', 'ngc365', 'jupter']
-    kpiNebulosa.innerHTML = labels[0]
-    kpiGalaxia.innerHTML = labels[1]
-    kpiPlaneta.innerHTML = labels[2]''
-
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: labels,
-            datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-</script> -->
-
 <script>
     avatar.innerHTML = sessionStorage.NOME_USUARIO;
     avatarT.innerHTML = sessionStorage.NOME_USUARIO;
@@ -163,9 +136,6 @@
             });
     }
 
-    // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
-    // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
-    // A função *plotarGrafico* também invoca a função *atualizarGrafico*
     function plotarGrafico(resposta) {
 
 
@@ -187,7 +157,6 @@
         var dadosP = [];
 
 
-        // Inserindo valores recebidos em estrutura para plotar o gráfico
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
             labels.push(registro.nome_nebulosa_mais_frequente_1);
