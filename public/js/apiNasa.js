@@ -3,11 +3,14 @@ var img = document.getElementById("img");
 var iframe = document.getElementById("video");
 var titulo = document.getElementById("title");
 var main = document.getElementById("mainI");
-var date = "2021-02-01";
-var date2 = "2021-02-07";
+var date = "2024-06-04";
+var data = Date.now()
+var atual = new date(data)
+console.log(atual)
+var date2 = "2024-05-29";
 function req() {
     fetch(
-        `https://api.nasa.gov/planetary/apod?api_key=mzrjcSTeBLANsC0bl1lxj2XkPHupxi7HtMl7qnp3&start_date=2021-02-01&end_date=2021-02-09`
+        `https://api.nasa.gov/planetary/apod?api_key=mzrjcSTeBLANsC0bl1lxj2XkPHupxi7HtMl7qnp3&start_date=2024-05-29&end_date=2024-06-04`
     )
         .then((res) => res.json())
         .then((json) => {
