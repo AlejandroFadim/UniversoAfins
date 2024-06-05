@@ -25,3 +25,4 @@ O Universo Afins é um site/blog de astronomia fullstack, projetado para oferece
 - **Backend:** Node.js, Express.js
 - **Banco de Dados:** MYsql
 - **Controle de Versão:** Git, GitHub
+

@@ -11,14 +11,20 @@ function req() {
     )
         .then((res) => res.json())
         .then((json) => {
+            
             for (var i = 0; i < json.length; i++) {
-                console.log(json.length);
+                console.log(json);
                 var jsonAtual = json[i];
                 var url = jsonAtual.url;
-                var texto = jsonAtual.explanation;
                 var title = jsonAtual.title;
                 var divInfo = document.createElement("section");
                 main.appendChild(divInfo);
+
+                var h1Info = document.createElement("h2");
+                var h1Section = document.createElement("section");
+                h1Info.innerHTML = title;
+                h1Section.appendChild(h1Info);
+                main.appendChild(h1Section);
 
                 if (jsonAtual.media_type == "video") {
                     var divIframe = document.createElement("iframe");
@@ -31,17 +37,6 @@ function req() {
                     divImg.src = url;
                     divInfo.appendChild(divImg);
                 }
-                var h1Info = document.createElement("h2");
-                var h1Section = document.createElement("section");
-                h1Section.appendChild(h1Info);
-                main.appendChild(h1Section);
-
-                h1Info.innerHTML = title;
-                var DescSection = document.createElement("section");
-                var descInfo = document.createElement("p");
-                descInfo.innerHTML = texto;
-                DescSection.appendChild(descInfo);
-                main.appendChild(DescSection);
             }
         });
 }

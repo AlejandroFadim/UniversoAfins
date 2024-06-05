@@ -3,9 +3,8 @@ var medidaModel = require("../models/medidaModel");
 function buscarUltimasMedidas(req, res) {
     const limite_linhas = 7;
 
-    // var idAquario = req.params.idAquario;
 
-    console.log(`Recuperando as ultimassssssssssss ${limite_linhas} medidas`);
+    console.log(`Recuperando as ultimas ${limite_linhas} medidas`);
     console.log("asdasdas")
 
     medidaModel.buscarUltimasMedidas()

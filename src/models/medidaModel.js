@@ -2,7 +2,6 @@ var database = require("../database/config");
 
 function buscarUltimasMedidas() {
     var instrucaoSql = `SELECT
-    -- Top 3 nebulosas mais frequentes
     (SELECT n.nome FROM nebulosa n 
     INNER JOIN escolhaUsuario eu ON n.idNebulosa = eu.fKNebulosa 
     GROUP BY n.nome ORDER BY COUNT(*) DESC 
@@ -29,7 +28,6 @@ function buscarUltimasMedidas() {
     INNER JOIN nebulosa n ON eu.fKNebulosa = n.idNebulosa 
     WHERE n.nome = nome_nebulosa_mais_frequente_3) AS frequencia_nebulosa_mais_frequente_3,
 
-    -- Top 3 galáxias mais frequentes
     (SELECT g.nome FROM galaxia g 
     INNER JOIN escolhaUsuario eu ON g.idGalaxia = eu.fkGalaxia 
     GROUP BY g.nome 
@@ -57,7 +55,6 @@ function buscarUltimasMedidas() {
     INNER JOIN galaxia g ON eu.fkGalaxia = g.idGalaxia 
     WHERE g.nome = nome_galaxia_mais_frequente_3) AS frequencia_galaxia_mais_frequente_3,
 
-    -- Top 3 planetas mais frequentes
     (SELECT p.nome FROM planeta p 
      INNER JOIN escolhaUsuario eu ON p.idPlaneta = eu.fkPlaneta 
      GROUP BY p.nome 
@@ -90,20 +87,7 @@ function buscarUltimasMedidas() {
     return database.executar(instrucaoSql);
 }
 
-function buscarMedidasEmTempoReal(idAquario) {
-    var instrucaoSql = `SELECT 
-        dht11_temperatura as temperatura, 
-        dht11_umidade as umidade,
-                        DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico, 
-                        fk_aquario 
-                        FROM medida WHERE fk_aquario = ${idAquario} 
-                    ORDER BY id DESC LIMIT 1`;
-
-    console.log("Executando a instrução SQL: \n" + instrucaoSql);
-    return database.executar(instrucaoSql);
-}
 
 module.exports = {
     buscarUltimasMedidas,
-    buscarMedidasEmTempoReal,
 };

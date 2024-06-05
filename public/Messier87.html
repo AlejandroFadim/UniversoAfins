@@ -1,139 +1,186 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon-16x16.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/paginas.css">
-    <link rel="icon" type="image/png" sizes="16x16"  href="favicons/favicon-16x16.png">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
     <script src="js/script.js" defer></script>
     <title>M87</title>
 </head>
+
 <body onload="atualizarFeed()">
-    
-        <header>
-            <a href="#">
-                <img id="logo" src="img/logo completo - Copia.png" alt="">
-            </a>
 
-            <div class="redes">
-                <div class="login-button logo" id="logo">
-                    <a href="login.html">
-                        <button id="btnLogin" >login</button>
-                    </a>
-                    <a href="avatar">
-                        <button id="avatar" >avatar</button>
-                    </a>
-                </div>
-            </div>
-        </header>
-            <nav class="nav-bar">
-                <div class="mobile-menu-icon">
-                    <button onclick="menuShow()">&#9776;</button>
-                </div>
-                <div class="nav-list">
-                    <ul>
-                        <li class="nav-item"><a href="index.html" class="nav-link" id="Inicio">Início</a></li>
-                        <li class="nav-item"><a href="pag_galaxia.html" class="nav-link">Galáxia</a></li>
-                        <li class="nav-item"><a href="pag_buraconegro.html" class="nav-link">Buraco Negro</a></li>
-                        <li class="nav-item"><a href="Pag_planetas.html" class="nav-link">Planetas</a></li>
-                        <li class="nav-item"><a href="pag_telescopio.html" class="nav-link">Telescópios espaciais</a></li>
-                        <li class="nav-item"><a href="pag_nebulosas.html" class="nav-link">Nebulosas</a></li>
-                    </ul>
-            </nav>
-            <div class="mobile-menu">
-                <ul>
-                    <li class="nav-item"><a href="index.html" class="nav-link" id="Inicio">Início</a></li>
-                    <li class="nav-item"><a href="pag_galaxia.html" class="nav-link">Galáxia</a></li>
-                    <li class="nav-item"><a href="pag_buraconegro.html" class="nav-link">Buraco Negro</a></li>
-                    <li class="nav-item"><a href="Pag_planetas.html" class="nav-link">Planetas</a></li>
-                    <li class="nav-item"><a href="pag_telescopio.html" class="nav-link">Telescópios espaciais</a></li>
-                    <li class="nav-item"><a href="pag_nebulosas.html" class="nav-link">Nebulosas</a></li>
-                </ul>
-            </div>
+    <header>
+        <a href="#">
+            <img id="logo" src="img/logo completo - Copia.png" alt="">
+        </a>
 
-            <div class="tag">
-                <i class="fa-solid fa-rocket" class="foguete"></i>
+        <div class="redes">
+            <div class="login-button logo" id="logo">
+                <a href="login.html">
+                    <button id="btnLogin">login</button>
+                </a>
+                <a href="avatar">
+                    <button id="avatar">avatar</button>
+                </a>
             </div>
+        </div>
+    </header>
+    <nav class="nav-bar">
+        <div class="mobile-menu-icon">
+            <button onclick="menuShow()">&#9776;</button>
+        </div>
+        <div class="nav-list">
+            <ul>
+                <li class="nav-item"><a href="index.html" class="nav-link" id="Inicio">Início</a></li>
+                <li class="nav-item"><a href="pag_galaxia.html" class="nav-link">Galáxia</a></li>
+                <li class="nav-item"><a href="pag_buraconegro.html" class="nav-link">Buraco Negro</a></li>
+                <li class="nav-item"><a href="Pag_planetas.html" class="nav-link">Planetas</a></li>
+                <li class="nav-item"><a href="pag_telescopio.html" class="nav-link">Telescópios espaciais</a></li>
+                <li class="nav-item"><a href="pag_nebulosas.html" class="nav-link">Nebulosas</a></li>
+                <li class="nav-item" id="viagem"><a href="viagemCosmica.html" class="nav-link">Viagem Cómisca</a></li>
+
+            </ul>
+    </nav>
+    <div class="mobile-menu">
+        <ul>
+            <li class="nav-item"><a href="index.html" class="nav-link" id="Inicio">Início</a></li>
+            <li class="nav-item"><a href="pag_galaxia.html" class="nav-link">Galáxia</a></li>
+            <li class="nav-item"><a href="pag_buraconegro.html" class="nav-link">Buraco Negro</a></li>
+            <li class="nav-item"><a href="Pag_planetas.html" class="nav-link">Planetas</a></li>
+            <li class="nav-item"><a href="pag_telescopio.html" class="nav-link">Telescópios espaciais</a></li>
+            <li class="nav-item"><a href="pag_nebulosas.html" class="nav-link">Nebulosas</a></li>
+        </ul>
+    </div>
+
+    <div class="tag">
+        <i class="fa-solid fa-rocket" class="foguete"></i>
+    </div>
     <main>
-            <article>
-                <img src="img/messier87_pag.jpg" alt="">
-                <section>
-                    <h2>
-                        Hubbler fotografa uma galáxia Distânte
-                    </h2>
-                </section>
+        <article>
+            <img src="img/messier87_pag.jpg" alt="">
+            <section>
+                <h2>
+                    Hubbler fotografa uma galáxia Distânte
+                </h2>
+            </section>
 
-                <section>
-                    
-                    <p>
-                        A galáxia elíptica M87 é o lar de vários trilhões de estrelas, um buraco negro supermassivo e uma família de cerca de 15.000 aglomerados estelares globulares. Para efeito de comparação, nossa Via Láctea contém apenas algumas centenas de bilhões de estrelas e cerca de 150 aglomerados globulares. O monstruoso M87 é o membro dominante do aglomerado de galáxias vizinho de Virgem, que contém cerca de 2.000 galáxias. Descoberta em 1781 por Charles Messier, esta galáxia está localizada a 54 milhões de anos-luz de distância da Terra, na constelação de Virgem. Tem uma magnitude aparente de 9,6 e pode ser observado usando um pequeno telescópio mais facilmente em maio.</p>
+            <section>
 
-
-                    <p>
-                        Esta imagem do Hubble de M87 é um composto de observações individuais em luz visível e infravermelha. Suas características mais marcantes são o jato azul perto do centro e a miríade de aglomerados globulares semelhantes a estrelas espalhados por toda a imagem.
-                    </p>
-
-
-                    <p>O jato é um fluxo de material movido a buracos negros que está sendo ejetado do núcleo do M87. À medida que o material gasoso do centro da galáxia se acumula no buraco negro, a energia liberada produz um fluxo de partículas subatômicas que são aceleradas a velocidades próximas à velocidade da luz.</p>
-
-                    <p>No centro do aglomerado de Virgem, o M87 pode ter acumulado alguns de seus muitos aglomerados globulares, puxando-os gravitacionalmente de galáxias anãs próximas que parecem estar desprovidas de tais aglomerados hoje.</p>
-                    
-                </section>
-                
-                <section>
-                    
-                    <h2>Um holofote cósmico </h2>
-                    <img src="img/caracterm87.jpg" alt="">
-                    <p>
-                        Saindo do centro da galáxia M87 como um holofote cósmico está um dos fenômenos mais incríveis da natureza, um jato de elétrons e outras partículas subatômicas movido a buracos negros viajando quase à velocidade da luz. Nesta imagem do Telescópio Espacial Hubble, da NASA, o azul do jato contrasta com o brilho amarelo da luz combinada de bilhões de estrelas invisíveis e os aglomerados globulares amarelos e pontiagudos que compõem esta galáxia.</p>
-                    
-                </section>
-                
-                <section>
-                    <h2>A linha do tempo de Messier87</h2>
-                    <img src="img/NCG44.jpg" alt="">
-                    <p>
-                        À primeira vista, M87 (também conhecida como NGC 4486) parece ser uma galáxia elíptica gigante comum; um dos muitos elípticos no aglomerado de galáxias de Virgem. No entanto, já em 1918, o astrônomo H.D. Curtis notou um "curioso raio reto" se projetando de M87. Na década de 1950, quando o campo do rádio estava florescendo, descobriu-se que uma das fontes de rádio mais brilhantes do céu, Virgem A, estava associada ao M87 e seu jato.
-                    </p>
-                    <p>
-                        Após décadas de estudo, motivados por essas descobertas, a fonte dessa incrível quantidade de energia que alimenta o jato ficou clara. No centro de M87 está um buraco negro supermassivo, que engoliu uma massa equivalente a 2 bilhões de vezes a massa do nosso Sol. O jato se origina no disco de gás superaquecido que gira em torno desse buraco negro e é impulsionado e concentrado pelos intensos campos magnéticos retorcidos aprisionados dentro desse plasma. A luz que vemos (e a emissão de rádio) é produzida por elétrons que se torcem ao longo das linhas do campo magnético no jato, um processo conhecido como radiação síncrotron, que dá ao jato sua tonalidade azulada.
-                    </p>
-
-                    <p>
-                        O M87 é um dos mais próximos e é o jato extragaláctico mais bem estudado, mas muitos outros existem. Onde quer que um buraco negro massivo esteja se alimentando de uma dieta particularmente rica de estrelas interrompidas, gás e poeira, as condições são adequadas para a formação de um jato. Curiosamente, um fenômeno semelhante ocorre em torno de estrelas jovens, embora em escalas e energias muito menores.
-                    </p>
-                    <p>
-                        A uma distância de 50 milhões de anos-luz, M87 é muito distante para o Hubble discernir estrelas individuais. As dezenas de pontos semelhantes a estrelas que pululam em torno de M87 são, em vez disso, aglomerados de centenas de milhares de estrelas cada. Estima-se que 15.000 aglomerados globulares se formaram muito cedo na história desta galáxia e são mais antigos do que a segunda geração de estrelas, que se amontoam mais perto do centro da galáxia.
-                    </p>
-                    
-                    <p>
-                        Os dados foram coletados com a Wide Field Planetary Camera 2 do Hubble em 1998 por J.A. Biretta, W.B. Sparks, F.D. Macchetto e E.S. Perlman (STScI). A equipe do Hubble Heritage combinou essas exposições de luz ultravioleta, azul, verde e infravermelha para criar essa imagem colorida.
-                    </p>
-                </section>
-                
-                
-            </article>
-
-            <aside class="sticky-aside">
-                <img src="img/logo=blog=pag.jpg" alt="">
-                
-                <h2>Vislumbre a grandeza do universo:</h2> <h3> Vídeos incríveis que o deixarão maravilhado todas as semanas no YouTube + notícias astronômicas diárias para alimentar sua curiosidade no instagram e facebook! </h3>
-                <div class="redes-aside">
-
-                    <a href="https://www.youtube.com/channel/UCuz9FePPtCziiGhhlJ6OMtw" target="_blank"><i class="fa-brands fa-youtube" style="color: #000000;"></i></a>
+                <p>
+                    A galáxia elíptica M87 é o lar de vários trilhões de estrelas, um buraco negro supermassivo e uma
+                    família de cerca de 15.000 aglomerados estelares globulares. Para efeito de comparação, nossa Via
+                    Láctea contém apenas algumas centenas de bilhões de estrelas e cerca de 150 aglomerados globulares.
+                    O monstruoso M87 é o membro dominante do aglomerado de galáxias vizinho de Virgem, que contém cerca
+                    de 2.000 galáxias. Descoberta em 1781 por Charles Messier, esta galáxia está localizada a 54 milhões
+                    de anos-luz de distância da Terra, na constelação de Virgem. Tem uma magnitude aparente de 9,6 e
+                    pode ser observado usando um pequeno telescópio mais facilmente em maio.</p>
 
 
-                    
-                    <a href="https://instagram.com/universoafins?igshid=MzRlODBiNWFlZA==" target="_blank"><i class="fa-brands fa-instagram" style="color: #000000;"></i></a>
-                    <a href="#" target="_blank"><i class="fa-brands fa-facebook" style="color: #000000;"></i></a>
-                    
-                </div>
-            </aside>
+                <p>
+                    Esta imagem do Hubble de M87 é um composto de observações individuais em luz visível e
+                    infravermelha. Suas características mais marcantes são o jato azul perto do centro e a miríade de
+                    aglomerados globulares semelhantes a estrelas espalhados por toda a imagem.
+                </p>
+
+
+                <p>O jato é um fluxo de material movido a buracos negros que está sendo ejetado do núcleo do M87. À
+                    medida que o material gasoso do centro da galáxia se acumula no buraco negro, a energia liberada
+                    produz um fluxo de partículas subatômicas que são aceleradas a velocidades próximas à velocidade da
+                    luz.</p>
+
+                <p>No centro do aglomerado de Virgem, o M87 pode ter acumulado alguns de seus muitos aglomerados
+                    globulares, puxando-os gravitacionalmente de galáxias anãs próximas que parecem estar desprovidas de
+                    tais aglomerados hoje.</p>
+
+            </section>
+
+            <section>
+
+                <h2>Um holofote cósmico </h2>
+                <img src="img/caracterm87.jpg" alt="">
+                <p>
+                    Saindo do centro da galáxia M87 como um holofote cósmico está um dos fenômenos mais incríveis da
+                    natureza, um jato de elétrons e outras partículas subatômicas movido a buracos negros viajando quase
+                    à velocidade da luz. Nesta imagem do Telescópio Espacial Hubble, da NASA, o azul do jato contrasta
+                    com o brilho amarelo da luz combinada de bilhões de estrelas invisíveis e os aglomerados globulares
+                    amarelos e pontiagudos que compõem esta galáxia.</p>
+
+            </section>
+
+            <section>
+                <h2>A linha do tempo de Messier87</h2>
+                <img src="img/NCG44.jpg" alt="">
+                <p>
+                    À primeira vista, M87 (também conhecida como NGC 4486) parece ser uma galáxia elíptica gigante
+                    comum; um dos muitos elípticos no aglomerado de galáxias de Virgem. No entanto, já em 1918, o
+                    astrônomo H.D. Curtis notou um "curioso raio reto" se projetando de M87. Na década de 1950, quando o
+                    campo do rádio estava florescendo, descobriu-se que uma das fontes de rádio mais brilhantes do céu,
+                    Virgem A, estava associada ao M87 e seu jato.
+                </p>
+                <p>
+                    Após décadas de estudo, motivados por essas descobertas, a fonte dessa incrível quantidade de
+                    energia que alimenta o jato ficou clara. No centro de M87 está um buraco negro supermassivo, que
+                    engoliu uma massa equivalente a 2 bilhões de vezes a massa do nosso Sol. O jato se origina no disco
+                    de gás superaquecido que gira em torno desse buraco negro e é impulsionado e concentrado pelos
+                    intensos campos magnéticos retorcidos aprisionados dentro desse plasma. A luz que vemos (e a emissão
+                    de rádio) é produzida por elétrons que se torcem ao longo das linhas do campo magnético no jato, um
+                    processo conhecido como radiação síncrotron, que dá ao jato sua tonalidade azulada.
+                </p>
+
+                <p>
+                    O M87 é um dos mais próximos e é o jato extragaláctico mais bem estudado, mas muitos outros existem.
+                    Onde quer que um buraco negro massivo esteja se alimentando de uma dieta particularmente rica de
+                    estrelas interrompidas, gás e poeira, as condições são adequadas para a formação de um jato.
+                    Curiosamente, um fenômeno semelhante ocorre em torno de estrelas jovens, embora em escalas e
+                    energias muito menores.
+                </p>
+                <p>
+                    A uma distância de 50 milhões de anos-luz, M87 é muito distante para o Hubble discernir estrelas
+                    individuais. As dezenas de pontos semelhantes a estrelas que pululam em torno de M87 são, em vez
+                    disso, aglomerados de centenas de milhares de estrelas cada. Estima-se que 15.000 aglomerados
+                    globulares se formaram muito cedo na história desta galáxia e são mais antigos do que a segunda
+                    geração de estrelas, que se amontoam mais perto do centro da galáxia.
+                </p>
+
+                <p>
+                    Os dados foram coletados com a Wide Field Planetary Camera 2 do Hubble em 1998 por J.A. Biretta,
+                    W.B. Sparks, F.D. Macchetto e E.S. Perlman (STScI). A equipe do Hubble Heritage combinou essas
+                    exposições de luz ultravioleta, azul, verde e infravermelha para criar essa imagem colorida.
+                </p>
+            </section>
+
+
+        </article>
+
+        <aside class="sticky-aside">
+            <img src="img/logo=blog=pag.jpg" alt="">
+
+            <h2>Vislumbre a grandeza do universo:</h2>
+            <h3> Vídeos incríveis que o deixarão maravilhado todas as semanas no YouTube + notícias astronômicas diárias
+                para alimentar sua curiosidade no instagram e facebook! </h3>
+            <div class="redes-aside">
+
+                <a href="https://www.youtube.com/channel/UCuz9FePPtCziiGhhlJ6OMtw" target="_blank"><i
+                        class="fa-brands fa-youtube" style="color: #000000;"></i></a>
+
+
+
+                <a href="https://instagram.com/universoafins?igshid=MzRlODBiNWFlZA==" target="_blank"><i
+                        class="fa-brands fa-instagram" style="color: #000000;"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-facebook" style="color: #000000;"></i></a>
+
+            </div>
+        </aside>
     </main>
     <div class="divPai">
         <section class="comentarioPai">
@@ -163,58 +210,78 @@
         <div id="feed_container" class="feed-container">
         </div>
     </div>
-    <main class="main_semelhante">    
+    <main class="main_semelhante">
         <div class="titulo_article">
-            <h2>.Titulos semelhantes.</h2>    
+            <h2>.Titulos semelhantes.</h2>
         </div>
         <article class="titulos_semenhantes">
-                <section class="section_semelhante">
-                    <div class="card">
-                        <div class="button_card">
-                            <button><a href="pag_galaxia.html"> Galáxia </a></button>
-                        </div>
-                        <div class="header_box">
-                            <div class="imagem">
-                                <img src="img/galaxiafantasma.jpg">
-                            </div>
-                            <div class="texto"><a href="pag_Galaxia-fantasma.html"><h2>Webb investiga o coração da galáxia fantasma</h2><p>A Galáxia Fantasma está a cerca de 32 milhões de anos-luz de distância da Terra, na constelação de Peixes, e fica quase de frente para a Terra.</p><br> <p> Isso, juntamente com seus braços espirais bem definidos, o torna um alvo favorito para os astrônomos que estudam a origem e a estrutura das espirais galácticas...</p><i class="fa-solid fa-earth-europe" style="color: #ffffff;"></i></a></div>
-                        </div>
-                        
+            <section class="section_semelhante">
+                <div class="card">
+                    <div class="button_card">
+                        <button><a href="pag_galaxia.html"> Galáxia </a></button>
                     </div>
-    
-                    <div class="card">
-                        <div class="button_card">
-                            <button><a href="pag_telescopio.html"> James Web </a></button>
+                    <div class="header_box">
+                        <div class="imagem">
+                            <img src="img/galaxiafantasma.jpg">
                         </div>
-                        <div class="header_box">                    
-                            <div class="imagem">
-                                <img src="img/web.jpg">
-                            </div>
-                            <div class="texto">
-                                <a href="pag_ncg5068.html"><h2>Um delicado traço de poeira e aglomerados estelares brilhantes atravessa esta imagem do Telescópio Espacial James Webb.</h2>
-                                <p>o aglomerado de gás e estrelas brilhantes pertencem à galáxia espiral chamada de NGC 5068, que esta cerca de 20 milhões de anos-luz da Terra, na constelação de Virgem...</p><br>
+                        <div class="texto"><a href="pag_Galaxia-fantasma.html">
+                                <h2>Webb investiga o coração da galáxia fantasma</h2>
+                                <p>A Galáxia Fantasma está a cerca de 32 milhões de anos-luz de distância da Terra, na
+                                    constelação de Peixes, e fica quase de frente para a Terra.</p><br>
+                                <p> Isso, juntamente com seus braços espirais bem definidos, o torna um alvo favorito
+                                    para os astrônomos que estudam a origem e a estrutura das espirais galácticas...</p>
+                                <i class="fa-solid fa-earth-europe" style="color: #ffffff;"></i>
+                            </a></div>
+                    </div>
+
+                </div>
+
+                <div class="card">
+                    <div class="button_card">
+                        <button><a href="pag_telescopio.html"> James Web </a></button>
+                    </div>
+                    <div class="header_box">
+                        <div class="imagem">
+                            <img src="img/web.jpg">
+                        </div>
+                        <div class="texto">
+                            <a href="pag_ncg5068.html">
+                                <h2>Um delicado traço de poeira e aglomerados estelares brilhantes atravessa esta imagem
+                                    do Telescópio Espacial James Webb.</h2>
+                                <p>o aglomerado de gás e estrelas brilhantes pertencem à galáxia espiral chamada de NGC
+                                    5068, que esta cerca de 20 milhões de anos-luz da Terra, na constelação de Virgem...
+                                </p><br>
                                 <p></p>
                                 <div class="svg">
-                                    <img src="img/telescopio.png" alt="" class="svg"></a>
-                                </div>
-                            </div>
+                                    <img src="img/telescopio.png" alt="" class="svg">
+                            </a>
                         </div>
-        
                     </div>
-    
-                    <div class="card">
-                        <div class="button_card">
-                            <button><a href="pag_galaxia.html"> Galáxia </a></button>
-                        </div>
-                        <div class="header_box">
-                            <div class="imagem">
-                                <img src="img/quinteto_estephan.jpg">
-                            </div>
-                            <div class="texto"><a href="pag_estephan.html"><h2>O Quinteto de Stephan</h2><p>Um enorme mosaico do Quinteto de Stephan é a maior imagem até hoje do Telescópio Espacial James Webb da NASA/ESA/CSA.</p><br>
-                        <p> Esta imagem composta NIRCam-MIRI usa dois dos três filtros MIRI para melhor mostrar e diferenciar a poeira quente e a estrutura dentro da galáxia. MIRI vê uma diferença distinta de cor entre a poeira nas galáxias versus as ondas de choque entre as galáxias em interação...</p><i class="fa-solid fa-earth-europe" style="color: #ffffff;"></i></a></div>
-                        </div>
-                        
+                </div>
+
+                </div>
+
+                <div class="card">
+                    <div class="button_card">
+                        <button><a href="pag_galaxia.html"> Galáxia </a></button>
                     </div>
+                    <div class="header_box">
+                        <div class="imagem">
+                            <img src="img/quinteto_estephan.jpg">
+                        </div>
+                        <div class="texto"><a href="pag_estephan.html">
+                                <h2>O Quinteto de Stephan</h2>
+                                <p>Um enorme mosaico do Quinteto de Stephan é a maior imagem até hoje do Telescópio
+                                    Espacial James Webb da NASA/ESA/CSA.</p><br>
+                                <p> Esta imagem composta NIRCam-MIRI usa dois dos três filtros MIRI para melhor mostrar
+                                    e diferenciar a poeira quente e a estrutura dentro da galáxia. MIRI vê uma diferença
+                                    distinta de cor entre a poeira nas galáxias versus as ondas de choque entre as
+                                    galáxias em interação...</p><i class="fa-solid fa-earth-europe"
+                                    style="color: #ffffff;"></i>
+                            </a></div>
+                    </div>
+
+                </div>
             </section>
         </article>
     </main>
@@ -222,25 +289,30 @@
     <footer>
         <div class="body_footer">
             <div class="texto">
-            <h2>Nada me assusta e me fascina mais do que o universo: a incerteza mais bela na qual estamos inseridos. <cite>Albert Einstein</cite></h2>
+                <h2>Nada me assusta e me fascina mais do que o universo: a incerteza mais bela na qual estamos
+                    inseridos. <cite>Albert Einstein</cite></h2>
             </div>
             <div class="desenvolvdo">
                 <a href="https://github.com/BoemiaDEV" target="_blank">
                     <h2> Desenvolvdo por BoemiaDEV <i class="fa-brands fa-github"></i></h2>
                 </a>
-            
-            </div>
 
             </div>
-            <div class="footer_redes">
-                <div class="redes_filho">
-                    <a href="https://instagram.com/universoafins?igshid=MzRlODBiNWFlZA==" id="insta"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/channel/UCuz9FePPtCziiGhhlJ6OMtw" id="youtube_footer"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://www.tiktok.com/@universoafins?_t=8e6DfzFbV6k&_r=1" id="tiktok"><i class="fa-brands fa-tiktok"></i></a>
-                </div>
-                
+
+        </div>
+        <div class="footer_redes">
+            <div class="redes_filho">
+                <a href="https://instagram.com/universoafins?igshid=MzRlODBiNWFlZA==" id="insta"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCuz9FePPtCziiGhhlJ6OMtw" id="youtube_footer"><i
+                        class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@universoafins?_t=8e6DfzFbV6k&_r=1" id="tiktok"><i
+                        class="fa-brands fa-tiktok"></i></a>
+            </div>
+
         </div>
     </footer>
 
 </body>
+
 </html>
