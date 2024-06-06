@@ -3,15 +3,31 @@ var img = document.getElementById("img");
 var iframe = document.getElementById("video");
 var titulo = document.getElementById("title");
 var main = document.getElementById("mainI");
-var date = "2024-06-04";
-var date2 = "2024-05-29";
+
+function formatDate(data) {
+    var d = data;
+    var mes = "" + (d.getMonth() + 1);
+    var dia = "" + d.getDate();
+    var ano = d.getFullYear();
+    if (mes.length < 2) {
+        mes = "0" + mes;
+    }
+    if (dia.length < 2) {
+        dia = "0" + dia;
+    }
+    return `${ano}-${mes}-${dia}`;
+}
+var atual = new Date();
+var inicoSemana = new Date();
+inicoSemana.setDate(atual.getDate() - 7);
+var inicoSemana = formatDate(inicoSemana);
+var fimSemana = formatDate(atual);
 function req() {
     fetch(
-        `https://api.nasa.gov/planetary/apod?api_key=mzrjcSTeBLANsC0bl1lxj2XkPHupxi7HtMl7qnp3&start_date=2024-05-29&end_date=2024-06-04`
+        `https://api.nasa.gov/planetary/apod?api_key=mzrjcSTeBLANsC0bl1lxj2XkPHupxi7HtMl7qnp3&start_date=${inicoSemana}&end_date=${fimSemana}`
     )
         .then((res) => res.json())
         .then((json) => {
-            
             for (var i = 0; i < json.length; i++) {
                 console.log(json);
                 var jsonAtual = json[i];
