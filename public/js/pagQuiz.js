@@ -1,5 +1,4 @@
 var idUsuario = Number(sessionStorage.ID_USUARIO);
-console.log(idUsuario);
 var escolhaUsuario = {
     fkUsuario: idUsuario,
     fkNebulosa: "",
@@ -100,29 +99,24 @@ function pushJson(nomeNebulosa, nomeID) {
 
 idFoguteCrab.addEventListener("click", (e) => {
     var nomeNebulosa = Number(e.target.id);
-    console.log(nomeNebulosa);
     pushJson(nomeNebulosa, idFoguteCrab);
 });
 idFoguteRing.addEventListener("click", (e) => {
     var nomeNebulosa = Number(e.target.id);
-    console.log(nomeNebulosa);
     pushJson(nomeNebulosa, idFoguteRing);
 });
 idFoguteRho.addEventListener("click", (e) => {
     var nomeNebulosa = Number(e.target.id);
-    console.log(nomeNebulosa);
 
     pushJson(nomeNebulosa, idFoguteRho);
 });
 idFoguteClas.addEventListener("click", (e) => {
     var nomeNebulosa = Number(e.target.id);
-    console.log(nomeNebulosa);
 
     pushJson(nomeNebulosa, idFoguteClas);
 });
 Eso137.addEventListener("click", (e) => {
     var nomeGalaxia = Number(e.target.id);
-    // console.log(nomeGalaxia)
 
     pushJsonGalaxia(nomeGalaxia, Eso137);
 });
@@ -152,6 +146,5 @@ saturno.addEventListener("click", (e) => {
 });
 marte.addEventListener("click", (e) => {
     var nomePlaneta = Number(Number(e.target.id));
-    // console.log(nomePlaneta)
     pushJsonPlaneta(nomePlaneta, marte);
 });

@@ -1,5 +1,5 @@
 var logBtn = document.getElementById("btnLogin");
-var navLink = document.getElementsByClassName("nav-link")
+var navLink = document.getElementsByClassName("nav-link");
 var avatar = document.getElementById("avatar");
 var spanComentario = document.getElementById("spanComentario");
 var LinkComentarioLogin = document.getElementById("LinkComentario");
@@ -10,7 +10,6 @@ var iptDescricao = document.getElementById("descricao");
 var atualURl = window.location.href;
 var urlArtigo = atualURl.split("/");
 var urlManipulada = urlArtigo[urlArtigo.length - 1];
-console.log(navLink);
 function menuShow() {
     let menuMobile = document.querySelector(".mobile-menu");
     if (menuMobile.classList.contains("open")) {
@@ -25,11 +24,10 @@ function pegaTags() {
         avatar.style.display = "block";
         avatar.style.backgroundColor = "green";
         avatar.innerHTML = sessionStorage.NOME_USUARIO;
-        viagem.style.display = 'block'
-        for(var i = 0; i < navLink.length; i++ ) {
-            navLink[i].style.fontSize = "22px"
+        viagem.style.display = "block";
+        for (var i = 0; i < navLink.length; i++) {
+            navLink[i].style.fontSize = "22px";
         }
-        console.log("usuario existe");
     } else {
         console.log("nao tem usuario");
         console.log(atualURl);
@@ -123,15 +121,13 @@ function atualizarFeed() {
                 }
 
                 resposta.json().then(function (resposta) {
-                    console.log("tem comentariossssss ---------");
-                    console.log("Dados recebidos: ", JSON.stringify(resposta));
 
                     var feed = document.getElementById("feed_container");
                     feed.innerHTML = "";
                     for (let i = 0; i < resposta.length; i++) {
                         var publicacao = resposta[i];
 
-                        // criando e manipulando elementos do HTML via JavaScript
+                        
                         var divPublicacao = document.createElement("div");
                         var spanID = document.createElement("span");
                         var spanTitulo = document.createElement("span");
@@ -154,14 +150,12 @@ function atualizarFeed() {
                         spanTitulo.className = "publicacao-titulo";
                         divDescricao.className = "publicacao-descricao";
 
-                       
-
                         divPublicacao.appendChild(spanID);
                         divPublicacao.appendChild(spanNome);
                         divPublicacao.appendChild(spanTitulo);
                         divPublicacao.appendChild(divDescricao);
                         divPublicacao.appendChild(divButtons);
-                     
+
                         feed.appendChild(divPublicacao);
                     }
 
