@@ -4,12 +4,11 @@ create table usuario (
 id int primary key auto_increment,
 nome varchar(45),
 email varchar(45),
-senha varchar(45),
-cep varchar(45),
-dtNasc date,
-rua varchar(45),
-bairro varchar(45),
-uf char(2));
+senha varchar(45)
+;
+
+insert into usuario values
+(1 , 'alejandro', 'alejandro@gmail.com', '12345678', );
 
 create table comentario (
 id int primary key auto_increment,
@@ -33,10 +32,10 @@ idPlaneta int primary key,
 nome varchar(45));
 
 insert into galaxia values
-(1,'Eso137'),
-(2,'Ngc7496'),
-(3,'Ngc265'),
-(4,'Vv191');
+(1,'ESO137'),
+(2,'NGC7496'),
+(3,'NGC265'),
+(4,'VV191');
 
 insert into nebulosa values
 (1,'Crab'),
